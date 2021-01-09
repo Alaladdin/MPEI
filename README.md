@@ -1,3 +1,5 @@
+[![Netlify Status](https://api.netlify.com/api/v1/badges/bbf2370e-4608-40df-ad73-7275c6b71429/deploy-status)](https://app.netlify.com/sites/xenodochial-bardeen-1a88d2/deploys)
+
 # Справочник
 
 Для разметки контента используется markdown, собирается сайт движком MKDocs.

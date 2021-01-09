@@ -1,11 +1,11 @@
 site_name: MPEI
 site_description: MPEI students open library
 site_author: Aladdin
+# site_url:
 
 repo_name: "Github"
-# site_url:
-# repo_url:
-# edit_uri: tree/master/docs/src/markdown
+repo_url: https://github.com/Alaladdin/MPEI
+edit_uri: edit/main/docs/
 copyright: By <a href="https://github.com/Alaladdin"  target="_blank" rel="nofollow noopener">Alaladdin</a>
 
 theme:
