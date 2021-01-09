@@ -1,0 +1,55 @@
+site_name: MPEI
+site_description: MPEI students open library
+site_author: Aladdin
+
+repo_name: "Github"
+# site_url:
+# repo_url:
+# edit_uri: tree/master/docs/src/markdown
+copyright: By <a href="https://github.com/Alaladdin"  target="_blank" rel="nofollow noopener">Alaladdin</a>
+
+theme:
+  name: material
+  language: ru
+  palette:
+    scheme: slate
+    primary: deep purple
+    accent: deep purple
+
+  features:
+    - navigation.tabs
+    - navigation.sections
+
+  font:
+    text: Roboto
+    code: Roboto Mono
+  icon:
+    logo: material/library
+
+    repo: fontawesome/brands/github-alt
+
+google_analytics: ["G-LH7LL4WYL8", "auto"]
+
+markdown_extensions:
+  - admonition
+  - toc:
+      permalink: "#"
+
+  - pymdownx.extra
+  - pymdownx.tabbed
+  - pymdownx.superfences
+
+plugins:
+  - search
+  - awesome-pages
+  - minify:
+      minify_html: true
+      minify_js: true
+      htmlmin_opts:
+        remove_comments: true
+
+  - git-revision-date:
+      enabled_if_env: CI
+
+extra_css:
+  - "src/css/main.css"

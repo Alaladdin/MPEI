@@ -1,0 +1,26 @@
+[data-md-color-scheme=slate] {
+  --md-header-bg-color: #1e2029;
+  --md-primary-fg-color: #bf95f9;
+  --md-primary-fg-color--transparent: #bf95f91a;
+  --md-typeset-a-color: #8be8fd;
+  --md-accent-fg-color: #b07df7;
+  --md-text-color: #f8f8f2de;
+}
+
+.md-nav__item .md-nav__link--active, .md-tabs__link--active {
+  color: var(--md-primary-fg-color);
+}
+
+.md-nav__item .md-nav__link:hover, .md-nav__item .md-nav__link:focus, .md-tabs__link:hover, .md-tabs__link:focus {
+  color: var(--md-accent-fg-color);
+}
+
+.md-header {
+  background-color: var(--md-header-bg-color);
+  border-bottom: 0.05rem solid var(--md-primary-fg-color);
+}
+.md-tabs {
+  background-color: var(--md-primary-fg-color--transparent);
+}
+
+/*# sourceMappingURL=main.css.map */
