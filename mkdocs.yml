@@ -1,7 +1,7 @@
 site_name: MPEI
 site_description: MPEI students open library
 site_author: Aladdin
-# site_url:
+site_url: https://mpei.space/
 
 repo_name: "Github"
 repo_url: https://github.com/Alaladdin/MPEI
@@ -28,16 +28,25 @@ theme:
 
     repo: fontawesome/brands/github-alt
 
-google_analytics: ["G-LH7LL4WYL8", "auto"]
+google_analytics: [ "G-LH7LL4WYL8", "auto" ]
 
 markdown_extensions:
   - admonition
   - toc:
       permalink: "#"
 
+  #  - pymdownx.arithmatex - math
+  #  - pymdownx.details - spoiler
+  #  - pymdownx.emoji - emoji
   - pymdownx.extra
+  #  - pymdownx.keys
+  - pymdownx.mark
+  - pymdownx.magiclink
   - pymdownx.tabbed
+  - pymdownx.tasklist
   - pymdownx.superfences
+  #  - pymdownx.progressbar
+  - pymdownx.tilde
 
 plugins:
   - search
