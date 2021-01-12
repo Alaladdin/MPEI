@@ -28,10 +28,11 @@ theme:
 
     repo: fontawesome/brands/github-alt
 
-google_analytics: [ "G-LH7LL4WYL8", "auto" ]
+google_analytics: [ "G-71TRV5BECW", "auto" ]
 
 markdown_extensions:
   - admonition
+  - abbr
   - toc:
       permalink: "#"
 
@@ -41,9 +42,9 @@ markdown_extensions:
   - pymdownx.extra
   #  - pymdownx.keys
   - pymdownx.mark
-  - pymdownx.magiclink
-  - pymdownx.tabbed
-  - pymdownx.tasklist
+  #  - pymdownx.magiclink
+  #  - pymdownx.tabbed
+  #  - pymdownx.tasklist
   - pymdownx.superfences
   #  - pymdownx.progressbar
   - pymdownx.tilde
@@ -51,6 +52,12 @@ markdown_extensions:
 plugins:
   - search
   - awesome-pages
+  - git-revision-date-localized:
+      type: timeago
+      time_zone: Europe/Moscow
+      locale: ru
+      exclude:
+        - index.md
   - minify:
       minify_html: true
       minify_js: true
