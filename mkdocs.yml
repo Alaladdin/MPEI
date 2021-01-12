@@ -36,19 +36,18 @@ markdown_extensions:
   - toc:
       permalink: "#"
 
-  #  - pymdownx.arithmatex - math
-  #  - pymdownx.details - spoiler
-  #  - pymdownx.emoji - emoji
   - pymdownx.extra
-  #  - pymdownx.keys
   - pymdownx.mark
+  - pymdownx.superfences
+  - pymdownx.tilde
+  #  - pymdownx.progressbar
   #  - pymdownx.magiclink
   #  - pymdownx.tabbed
   #  - pymdownx.tasklist
-  - pymdownx.superfences
-  #  - pymdownx.progressbar
-  - pymdownx.tilde
-
+  #  - pymdownx.keys
+  #  - pymdownx.arithmatex - math
+  #  - pymdownx.details - spoiler
+  #  - pymdownx.emoji - emoji
 plugins:
   - search
   - awesome-pages
@@ -63,9 +62,6 @@ plugins:
       minify_js: true
       htmlmin_opts:
         remove_comments: true
-
-  - git-revision-date:
-      enabled_if_env: CI
 
 extra_css:
   - "src/css/main.css"
