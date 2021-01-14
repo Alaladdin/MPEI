@@ -1,4 +1,5 @@
 .idea
 .ignore
-site
+.netlify
 node_modules
+site

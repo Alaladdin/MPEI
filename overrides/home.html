@@ -15,7 +15,7 @@
 {{ page.content }}
 
 
-<div class="layout layout2">
+<div class="layout layout-4">
     {% if page.meta.links %}
 
         {% for link in page.meta.links %}
@@ -27,11 +27,11 @@
             
             <a class='cell__link cell__link--inactive'>
                 {% if page.meta.links[link].icon %}
-                    <img class='cell__img cell__img--inactive' src='{{ page.meta.links[link].icon }}' alt='{{ page.meta.links[link].title }}'>
+                    <img class='cell__img' src='{{ page.meta.links[link].icon }}' alt='{{ page.meta.links[link].title }}'>
                 {% endif %}
                 
                 {% if page.meta.links[link].title %}
-                    <h3 class='cell__title'>{{ page.meta.links[link].title }}</h3>
+                    <h2 class='cell__title'>{{ page.meta.links[link].title }}</h2>
                 {% endif %}
             </a>
             
@@ -44,7 +44,7 @@
                 {% endif %}
     
                 {% if page.meta.links[link].title %}
-                    <h3 class='cell__title'>{{ page.meta.links[link].title }}</h3>
+                    <h2 class='cell__title'>{{ page.meta.links[link].title }}</h2>
                 {% endif %}
             </a>
             {% endif %}
@@ -58,18 +58,3 @@
 </div>
 
 {% endblock %}
-
-<!--
- @todo
- 
- - Изменить css классы
- - Улучшить css код
- 
- 
- 
- -->
-
-
-
-
-
