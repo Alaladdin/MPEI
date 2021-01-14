@@ -1,0 +1,10 @@
+[dev]
+    command = "mkdocs serve"
+    targetPort = 8000
+    publish = "site/"
+    framework = "#custom"
+
+
+[build]
+    command = "mkdocs build"
+    publish = "site/"

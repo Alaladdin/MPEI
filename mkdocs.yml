@@ -3,13 +3,13 @@ site_description: MPEI students open library
 site_author: Aladdin
 site_url: https://mpei.space/
 
-repo_name: "Github"
-repo_url: https://github.com/Alaladdin/MPEI
+repo_url: https://github.com/Alaladdin/MPEI/
 edit_uri: edit/main/docs/
-copyright: By <a href="https://github.com/Alaladdin"  target="_blank" rel="nofollow noopener">Alaladdin</a>
+copyright: By <a href="https://github.com/Alaladdin/"  target="_blank" rel="nofollow noopener">Alaladdin</a>
 
 theme:
   name: material
+  custom_dir: overrides
   language: ru
   palette:
     scheme: slate
@@ -53,6 +53,7 @@ markdown_extensions:
 plugins:
   - search
   - awesome-pages
+  - macros
   - git-revision-date-localized:
       type: timeago
       time_zone: Europe/Moscow
@@ -66,4 +67,4 @@ plugins:
         remove_comments: true
 
 extra_css:
-  - "src/css/main.css"
+  - 'src/css/main.css'
