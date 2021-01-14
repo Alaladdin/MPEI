@@ -42,9 +42,9 @@ markdown_extensions:
   - pymdownx.mark
   - pymdownx.superfences
   - pymdownx.tilde
+  - pymdownx.tabbed
   #  - pymdownx.progressbar
   #  - pymdownx.magiclink
-  #  - pymdownx.tabbed
   #  - pymdownx.tasklist
   #  - pymdownx.keys
   #  - pymdownx.arithmatex - math
