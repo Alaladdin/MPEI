@@ -39,10 +39,11 @@ markdown_extensions:
       permalink: "#"
 
   - pymdownx.extra
-  - pymdownx.mark
   - pymdownx.superfences
-  - pymdownx.tilde
   - pymdownx.tabbed
+  - pymdownx.tilde
+  - pymdownx.mark
+  - pymdownx.caret
   #  - pymdownx.progressbar
   #  - pymdownx.magiclink
   #  - pymdownx.tasklist

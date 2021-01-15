@@ -1,3 +1,5 @@
+@import 'mixins/hover';
+
 .md {
   &-sidebar {
     display: none;
@@ -24,6 +26,15 @@
 
       &--inactive {
         filter: grayscale(1);
+        opacity: .5;
+        cursor: not-allowed;
+      }
+
+      @include hover {
+        .cell__img {
+          box-shadow: 0 4px 10px var(--md-code-hl-function-color);
+          transform: translateY(-3px);
+        }
       }
     }
 
@@ -32,6 +43,8 @@
       width: 128px;
       border-radius: 100%;
       object-fit: cover;
+      transition: .3s all;
+      transition-property: transform, box-shadow;
     }
 
     &__title {
