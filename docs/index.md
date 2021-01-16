@@ -3,7 +3,7 @@ template: home.html
 
 links:
     oib:
-        title: OIB
+        title: ОИБ
         icon: assets/img/oib.webp
         url: /oib/
     history:

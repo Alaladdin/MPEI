@@ -27,20 +27,20 @@
             
             <a class='cell__link cell__link--inactive'>
                 {% if page.meta.links[link].icon %}
-                    <img class='cell__img' src='{{ page.meta.links[link].icon }}' alt='{{ page.meta.links[link].title }}'>
+                    <img class='cell__img' src='{{ page.meta.links[link].icon }}' alt='{{ page.meta.links[link].title }}' draggable='false'>
                 {% endif %}
                 
                 {% if page.meta.links[link].title %}
                     <h2 class='cell__title'>{{ page.meta.links[link].title }}</h2>
                 {% endif %}
             </a>
-            
-            
+
+
             {% else %}
             
             <a class='cell__link' href="{{ page.meta.links[link].url }}">
                 {% if page.meta.links[link].icon %}
-                    <img class='cell__img' src='{{ page.meta.links[link].icon }}' alt='{{ page.meta.links[link].title }}'>
+                    <img class='cell__img' src='{{ page.meta.links[link].icon }}' alt='{{ page.meta.links[link].title }}' draggable='false'>
                 {% endif %}
     
                 {% if page.meta.links[link].title %}
