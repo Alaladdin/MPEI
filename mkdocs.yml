@@ -59,8 +59,8 @@ plugins:
       type: timeago
       time_zone: Europe/Moscow
       locale: ru
-      exclude:
-        - index.md
+  #      exclude:
+  #        - index.md
   - minify:
       minify_html: true
       minify_js: true
@@ -68,4 +68,4 @@ plugins:
         remove_comments: true
 
 extra_css:
-  - 'src/css/main.css'
+  - 'assets/css/main.css'

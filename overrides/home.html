@@ -57,4 +57,17 @@
 
 </div>
 
+<!-- Revision date -->
+
+
+{% if page and page.meta %}
+    {% if page.meta.git_revision_date_localized or page.meta.revision_date %}
+        {#% include "partials/source-date.html" %#}
+        <small class='sr-only'>Последнее обновление: {{ page.meta.git_revision_date_localized }}</small>
+    {% endif %}
+{% endif %}
+
 {% endblock %}
+
+
+

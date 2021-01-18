@@ -1,3 +1,13 @@
+.sr-only {
+  position: absolute;
+  padding: 0;
+  margin: -1px;
+  height: 1px;
+  width: 1px;
+  clip: rect(0, 0, 0, 0);
+  overflow: hidden;
+}
+
 [data-md-color-scheme=slate] {
   --md-header-bg-color: #1e2029;
   --md-primary-fg-color: #bf95f9;
