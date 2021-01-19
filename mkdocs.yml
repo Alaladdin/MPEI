@@ -25,7 +25,6 @@ theme:
     code: Roboto Mono
   icon:
     logo: material/library
-
     repo: fontawesome/brands/github-alt
 
 google_analytics:
@@ -36,7 +35,7 @@ markdown_extensions:
   - admonition
   - abbr
   - toc:
-      permalink: "#"
+      permalink: '#'
 
   - pymdownx.extra
   - pymdownx.superfences
@@ -44,13 +43,10 @@ markdown_extensions:
   - pymdownx.tilde
   - pymdownx.mark
   - pymdownx.caret
-  #  - pymdownx.progressbar
-  #  - pymdownx.magiclink
+  - pymdownx.details
   #  - pymdownx.tasklist
-  #  - pymdownx.keys
-  #  - pymdownx.arithmatex - math
-  #  - pymdownx.details - spoiler
-  #  - pymdownx.emoji - emoji
+  #  - pymdownx.emoji
+
 plugins:
   - search
   - awesome-pages
@@ -59,8 +55,7 @@ plugins:
       type: timeago
       time_zone: Europe/Moscow
       locale: ru
-  #      exclude:
-  #        - index.md
+
   - minify:
       minify_html: true
       minify_js: true
