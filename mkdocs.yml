@@ -27,16 +27,13 @@ theme:
     logo: material/library
     repo: fontawesome/brands/github-alt
 
-google_analytics:
-  - 'G-71TRV5BECW'
-  - 'auto'
+tag_manager: 'GTM-KFJSDNH'
 
 markdown_extensions:
-  - admonition
-  - abbr
   - toc:
       permalink: '#'
-
+  - admonition
+  - abbr
   - pymdownx.extra
   - pymdownx.superfences
   - pymdownx.tabbed
