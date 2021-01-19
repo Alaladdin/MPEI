@@ -27,7 +27,6 @@ theme:
     logo: material/library
     repo: fontawesome/brands/github-alt
 
-# google_analytics: [ 'G-71TRV5BECW', '' ]
 tag_manager: 'GTM-KFJSDNH'
 
 markdown_extensions:
