@@ -31,11 +31,10 @@ theme:
 tag_manager: 'GTM-KFJSDNH'
 
 markdown_extensions:
-  - admonition
-  - abbr
   - toc:
       permalink: '#'
-
+  - admonition
+  - abbr
   - pymdownx.extra
   - pymdownx.superfences
   - pymdownx.tabbed
