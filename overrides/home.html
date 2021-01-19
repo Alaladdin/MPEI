@@ -4,9 +4,6 @@
   <link rel='stylesheet' href='/assets/css/home.css'>
 {% endblock %}
 
-
-{% block tabs %} {{ super() }} {% endblock %}
-
 <!-- Content -->
 {% block content %}
   {{ page.content }}
@@ -17,9 +14,7 @@
           {% for link in page.meta.links %}
           
           <div class="cell">
-              
               {% if page.meta.links[link].not_ready %}
-              
               
               <a class='cell__link cell__link--inactive'>
                   {% if page.meta.links[link].icon %}
@@ -30,7 +25,6 @@
                       <h2 class='cell__title'>{{ page.meta.links[link].title }}</h2>
                   {% endif %}
               </a>
-  
   
               {% else %}
               
@@ -43,6 +37,7 @@
                       <h2 class='cell__title'>{{ page.meta.links[link].title }}</h2>
                   {% endif %}
               </a>
+            
               {% endif %}
           
           </div>
@@ -50,7 +45,6 @@
           {% endfor %}
   
       {% endif %}
-  
   </div>
   
   <!-- Revision date -->
@@ -60,5 +54,4 @@
           <small class='sr-only'>Последнее обновление: {{ page.meta.git_revision_date_localized }}</small>
       {% endif %}
   {% endif %}
-
 {% endblock %}
