@@ -1,8 +1,7 @@
 {% extends "main.html" %}
 
 {% block extrahead %}
-<link rel='stylesheet' href='/assets/css/home.css'>
-
+  <link rel='stylesheet' href='/assets/css/home.css'>
 {% endblock %}
 
 
@@ -10,64 +9,56 @@
 
 <!-- Content -->
 {% block content %}
-
-
-{{ page.content }}
-
-
-<div class="layout layout-4">
-    {% if page.meta.links %}
-
-        {% for link in page.meta.links %}
-        
-        <div class="cell">
-            
-            {% if page.meta.links[link].not_ready %}
-            
-            
-            <a class='cell__link cell__link--inactive'>
-                {% if page.meta.links[link].icon %}
-                    <img class='cell__img' src='{{ page.meta.links[link].icon }}' alt='{{ page.meta.links[link].title }}' draggable='false'>
-                {% endif %}
-                
-                {% if page.meta.links[link].title %}
-                    <h2 class='cell__title'>{{ page.meta.links[link].title }}</h2>
-                {% endif %}
-            </a>
-
-
-            {% else %}
-            
-            <a class='cell__link' href="{{ page.meta.links[link].url }}">
-                {% if page.meta.links[link].icon %}
-                    <img class='cell__img' src='{{ page.meta.links[link].icon }}' alt='{{ page.meta.links[link].title }}' draggable='false'>
-                {% endif %}
-    
-                {% if page.meta.links[link].title %}
-                    <h2 class='cell__title'>{{ page.meta.links[link].title }}</h2>
-                {% endif %}
-            </a>
-            {% endif %}
-        
-        </div>
-        
-        {% endfor %}
-
-    {% endif %}
-
-</div>
-
-<!-- Revision date -->
-
-
-{% if page and page.meta %}
-    {% if page.meta.git_revision_date_localized or page.meta.revision_date %}
-        {#% include "partials/source-date.html" %#}
-        <small class='sr-only'>Последнее обновление: {{ page.meta.git_revision_date_localized }}</small>
-    {% endif %}
-{% endif %}
+  {{ page.content }}
+  
+  <div class="layout layout-4">
+      {% if page.meta.links %}
+  
+          {% for link in page.meta.links %}
+          
+          <div class="cell">
+              
+              {% if page.meta.links[link].not_ready %}
+              
+              
+              <a class='cell__link cell__link--inactive'>
+                  {% if page.meta.links[link].icon %}
+                      <img class='cell__img' src='{{ page.meta.links[link].icon }}' alt='{{ page.meta.links[link].title }}' draggable='false'>
+                  {% endif %}
+                  
+                  {% if page.meta.links[link].title %}
+                      <h2 class='cell__title'>{{ page.meta.links[link].title }}</h2>
+                  {% endif %}
+              </a>
+  
+  
+              {% else %}
+              
+              <a class='cell__link' href="{{ page.meta.links[link].url }}">
+                  {% if page.meta.links[link].icon %}
+                      <img class='cell__img' src='{{ page.meta.links[link].icon }}' alt='{{ page.meta.links[link].title }}' draggable='false'>
+                  {% endif %}
+      
+                  {% if page.meta.links[link].title %}
+                      <h2 class='cell__title'>{{ page.meta.links[link].title }}</h2>
+                  {% endif %}
+              </a>
+              {% endif %}
+          
+          </div>
+          
+          {% endfor %}
+  
+      {% endif %}
+  
+  </div>
+  
+  <!-- Revision date -->
+  {% if page and page.meta %}
+      {% if page.meta.git_revision_date_localized or page.meta.revision_date %}
+          {#% include "partials/source-date.html" %#}
+          <small class='sr-only'>Последнее обновление: {{ page.meta.git_revision_date_localized }}</small>
+      {% endif %}
+  {% endif %}
 
 {% endblock %}
-
-
-
