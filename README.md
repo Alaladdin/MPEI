@@ -1,5 +1,7 @@
-[![Netlify Status](https://api.netlify.com/api/v1/badges/bbf2370e-4608-40df-ad73-7275c6b71429/deploy-status)](https://app.netlify.com/sites/mpei/deploys)
-![GitHub](https://img.shields.io/github/license/Alaladdin/MPEI)
+[![Netlify Status](https://api.netlify.com/api/v1/badges/bbf2370e-4608-40df-ad73-7275c6b71429/deploy-status/)](https://app.netlify.com/sites/mpei/deploys/)
+![GitHub](https://img.shields.io/github/license/Alaladdin/MPEI/)
+
+[Beta version](https://beta.mpei.space/)
 
 # Справочник
 
