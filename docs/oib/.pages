@@ -1,6 +1,7 @@
 title: ОИБ
 nav:
     - Оглавление: index.md
+    - Инструкция к экзамену: instructions.md
     - theory
     - practice
 
