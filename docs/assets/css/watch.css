@@ -1,0 +1,20 @@
+.watch__player {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 10px;
+}
+.watch__buttons-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+.watch__btn {
+  font-size: 0.6rem;
+  cursor: pointer;
+  margin: 5px;
+}
+
+/*# sourceMappingURL=watch.css.map */
