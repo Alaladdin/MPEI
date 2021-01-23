@@ -108,11 +108,13 @@
     
     for (const [key, value] of Object.entries(watchList)) {
       const watchButtons = document.querySelector('.watch__buttons-list');
-      const btn = document.createElement('button');
+      const btn = document.createElement('option');
       
-      btn.textContent = value.name;
+      btn.option = value.name;
+      btn.value = value.name;
       // btn.dataset.url = key;
       btn.classList.add('watch__btn', 'md-button'); // , 'md-button--primary'
+      const select = document.createElement('select');
       
       btn.onclick = () => {
         const activeBtn = document.querySelector('.watch__btn.md-button--primary');
@@ -120,11 +122,12 @@
         changeWatch(key, value.date);
         
         activeBtn && activeBtn.classList.remove('md-button--primary');
-        
+        select.append(btn);
+  
         btn.classList.add('md-button--primary');
       };
       
-      watchButtons.append(btn);
+      // watchButtons.append(btn);
     }
     
     
