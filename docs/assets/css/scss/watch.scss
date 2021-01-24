@@ -4,31 +4,44 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    margin-bottom: 10px;
+    margin: 0 auto;
+    max-width: max-content;
   }
 
-  &__meta {
-
+  &__video {
+    margin-bottom: 20px;
+    height: 360px;
+    width: 640px;
   }
 
-  &__date {
-  }
-
-  &__buttons-list {
+  &__navigation {
     display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    align-items: center;
+    justify-content: space-between;
+    width: 100%;
   }
 
   &__btn {
-    font-size: 0.6rem;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background: #fff url('/assets/icons/arrow-left.svg') center no-repeat;
+    background-size: 30px;
     cursor: pointer;
-    margin: 5px;
-    //margin-top: 10px;
 
-    &--active {
-
+    &--next {
+      transform: rotate(180deg);
     }
+
+    &:disabled,
+    &--disabled {
+      opacity: .5;
+    }
+  }
+
+  &__select {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
   }
 }
