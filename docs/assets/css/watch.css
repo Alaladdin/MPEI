@@ -3,18 +3,38 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  margin-bottom: 10px;
+  margin: 0 auto;
+  max-width: max-content;
 }
-.watch__buttons-list {
+.watch__video {
+  margin-bottom: 20px;
+  height: 360px;
+  width: 640px;
+}
+.watch__navigation {
   display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  align-items: center;
+  justify-content: space-between;
+  width: 100%;
 }
 .watch__btn {
-  font-size: 0.6rem;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: #fff url("/assets/icons/arrow-left.svg") center no-repeat;
+  background-size: 30px;
   cursor: pointer;
-  margin: 5px;
+}
+.watch__btn--next {
+  transform: rotate(180deg);
+}
+.watch__btn:disabled, .watch__btn--disabled {
+  opacity: 0.5;
+}
+.watch__select {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
 }
 
 /*# sourceMappingURL=watch.css.map */

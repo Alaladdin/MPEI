@@ -10,5 +10,4 @@ links:
         title: История
         icon: assets/img/history.webp
         url: /history/
-        not_ready: true
 ---
