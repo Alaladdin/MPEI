@@ -41,7 +41,6 @@ markdown_extensions:
   - pymdownx.mark
   - pymdownx.caret
   - pymdownx.details
-  #  - pymdownx.tasklist
   #  - pymdownx.emoji
 
 plugins:
