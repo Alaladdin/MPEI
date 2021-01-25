@@ -43,7 +43,7 @@
     const option = document.createElement('option');
 
     option.value = key;
-    option.textContent = value.name;
+    option.textContent = value;
 
     watchSelect.append(option);
   }

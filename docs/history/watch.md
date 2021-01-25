@@ -8,20 +8,10 @@ hide:
 
 <script>
     const watchList = {
-      'wYoZkCA44z8': {
-        name: 'История',
-      },
-      'yrV-cpVD6sM': {
-        name: 'История',
-      },
-      'Ah048vcy-Ao': {
-        name: 'История',
-      },
-      'IsG4ndz9HaI': {
-        name: 'Семинар',
-      },
-      'N0fuvb8gT8w': {
-        name: 'Семинар',
-      },
+      'wYoZkCA44z8': 'История',
+      'yrV-cpVD6sM': 'История',
+      'Ah048vcy-Ao': 'История',
+      'IsG4ndz9HaI': 'Семинар',
+      'N0fuvb8gT8w': 'Семинар',
     };
 </script>

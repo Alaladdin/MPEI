@@ -44,7 +44,10 @@ markdown_extensions:
   #  - pymdownx.emoji
 
 plugins:
-  - search
+  - search:
+      lang:
+        - ru
+        - en
   - awesome-pages
   - macros
   - git-revision-date-localized:
