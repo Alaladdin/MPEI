@@ -1,10 +1,17 @@
 # Оглавление
 
-### [Инструкция к экзамену](instructions)
-
-### [Вопросы с консультации](consultation)
-
 ### [Записи](watch)
+
+### К экзамену
+
+???+ info
+    #### [Инструкция](instructions)
+    #### [Вопросы с консультации](consultation)
+    #### Файлы
+    [:fontawesome-solid-file-download:](files/form.docx){:download='form.docx'} [Форма для ответов](files/form.docx){:target='_blank'}
+    #### Вопросы
+    [:fontawesome-solid-file-download:](files/var_5.pdf){:download='var_5.pdf'} [5 вариант](files/var_5.pdf){:target='_blank'}  
+    [:fontawesome-solid-file-download:](files/var_6.pdf){:download='var_6.pdf'} [6 вариант](files/var_6.pdf){:target='_blank'}
 
 ### Теория
 
