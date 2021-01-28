@@ -1,23 +1,28 @@
+@import 'mixins/hover';
+@import 'components/dropDown';
+
 .watch {
   &__player {
     display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    margin: 0 auto;
-    max-width: max-content;
+    justify-content: space-between;
+    width: 100%;
   }
 
   &__video {
     margin-bottom: 20px;
+    border-radius: 6px;
     height: 360px;
     width: 640px;
+    transition: .3s box-shadow;
+
+    @include hover {
+      box-shadow: 0 2px 10px var(--md-header-bg-color);
+    }
   }
 
   &__navigation {
     display: flex;
     justify-content: space-between;
-    width: 100%;
   }
 
   &__btn {
@@ -26,7 +31,11 @@
     border-radius: 50%;
     background: #fff url('/assets/icons/arrow-left.svg') center no-repeat;
     background-size: 30px;
+    transition: .3s opacity;
     cursor: pointer;
+
+    // temp
+    display: none;
 
     &--next {
       transform: rotate(180deg);
@@ -39,9 +48,6 @@
   }
 
   &__select {
-    padding: 10px 20px;
-    border: none;
-    border-radius: 6px;
-    cursor: pointer;
+
   }
 }

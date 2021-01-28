@@ -1,0 +1,109 @@
+@import '../mixins/hover';
+
+.component {
+  border-radius: 10px;
+  width: fit-content;
+  margin: auto;
+
+  // Dropdown
+  &-dropdown {
+    position: relative;
+    border-radius: 6px;
+    border: 1px solid transparent;
+    min-width: 200px;
+    
+    cursor: pointer;
+    user-select: none;
+    background: var(--md-header-bg-color);
+
+    &__header {
+      display: flex;
+      padding: 10px 15px;
+      justify-content: space-between;
+      align-items: center;
+      border-radius: 6px;
+      border: 1px solid transparent;
+      transition: all .3s;
+      transition-property: border-color;
+    }
+
+    &__current {
+      display: inline-block;
+      margin-right: 20px;
+    }
+
+    &__icon {
+      display: inline-block;
+      transition: transform 180ms;
+    }
+
+    &__body {
+      display: none;
+      position: absolute;
+      border-radius: 0 0 6px 6px;
+      background: var(--md-header-bg-color);
+      width: 100%;
+      z-index: 99;
+      overflow-y: auto;
+      max-height: 300px;
+
+      &::-webkit-scrollbar {
+        width: 4px;
+        background: var(--md-header-bg-color);
+
+        &-thumb {
+          background: var(--md-code-hl-function-color);
+          border-radius: 5px;
+          background-clip: padding-box;
+          transition: .3s all;
+        }
+
+        &-track {
+          background: var(--md-header-bg-color);
+        }
+      }
+    }
+
+    &__option {
+      padding: 10px 15px;
+      border-radius: 6px;
+      outline: none;
+      word-break: break-word;
+      transition: all 100ms;
+      transition-property: background-color, color;
+
+      &:hover {
+        color: #fff;
+        background-color: var(--md-code-hl-function-color);
+      }
+
+      &.selected,
+      &:focus,
+      &:active {
+        color: #fff;
+        background-color: var(--primary);
+      }
+
+    }
+
+    &.is-active {
+      // border-color: var(--md-code-hl-function-color);
+
+      .component-dropdown {
+        &__header {
+          border-color: var(--md-code-hl-function-color);
+        }
+
+        &__icon {
+          transform: rotate(180deg);
+        }
+
+        &__body {
+          display: block;
+        }
+
+      }
+    }
+
+  }
+}

@@ -14,13 +14,14 @@
       
       <div class='watch__navigation'>
         <button class='btn watch__btn watch__btn--prev watch__btn--disabled' disabled></button>
-        <select class='watch__select' aria-label='select video'></select>
+        <div class='watch__select'></div>
         <button class='btn watch__btn watch__btn--next'></button>
       </div>
     </div>
   </div>
 
-  <script src='/assets/js/watch.js'></script>
+<script src='/assets/js/components/dropDown.js'></script>
+<script src='/assets/js/watch.js'></script>
 
   <!-- Revision date -->
   {% if page and page.meta %}

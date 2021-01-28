@@ -1,20 +1,104 @@
+.component {
+  border-radius: 10px;
+  width: fit-content;
+  margin: auto;
+}
+.component-dropdown {
+  position: relative;
+  border-radius: 6px;
+  border: 1px solid transparent;
+  min-width: 200px;
+  cursor: pointer;
+  user-select: none;
+  background: var(--md-header-bg-color);
+}
+.component-dropdown__header {
+  display: flex;
+  padding: 10px 15px;
+  justify-content: space-between;
+  align-items: center;
+  border-radius: 6px;
+  border: 1px solid transparent;
+  transition: all 0.3s;
+  transition-property: border-color;
+}
+.component-dropdown__current {
+  display: inline-block;
+  margin-right: 20px;
+}
+.component-dropdown__icon {
+  display: inline-block;
+  transition: transform 180ms;
+}
+.component-dropdown__body {
+  display: none;
+  position: absolute;
+  border-radius: 0 0 6px 6px;
+  background: var(--md-header-bg-color);
+  width: 100%;
+  z-index: 99;
+  overflow-y: auto;
+  max-height: 300px;
+}
+.component-dropdown__body::-webkit-scrollbar {
+  width: 4px;
+  background: var(--md-header-bg-color);
+}
+.component-dropdown__body::-webkit-scrollbar-thumb {
+  background: var(--md-code-hl-function-color);
+  border-radius: 5px;
+  background-clip: padding-box;
+  transition: 0.3s all;
+}
+.component-dropdown__body::-webkit-scrollbar-track {
+  background: var(--md-header-bg-color);
+}
+.component-dropdown__option {
+  padding: 10px 15px;
+  border-radius: 6px;
+  outline: none;
+  word-break: break-word;
+  transition: all 100ms;
+  transition-property: background-color, color;
+}
+.component-dropdown__option:hover {
+  color: #fff;
+  background-color: var(--md-code-hl-function-color);
+}
+.component-dropdown__option.selected, .component-dropdown__option:focus, .component-dropdown__option:active {
+  color: #fff;
+  background-color: var(--primary);
+}
+.component-dropdown.is-active .component-dropdown__header {
+  border-color: var(--md-code-hl-function-color);
+}
+.component-dropdown.is-active .component-dropdown__icon {
+  transform: rotate(180deg);
+}
+.component-dropdown.is-active .component-dropdown__body {
+  display: block;
+}
+
 .watch__player {
   display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  margin: 0 auto;
-  max-width: max-content;
+  justify-content: space-between;
+  width: 100%;
 }
 .watch__video {
   margin-bottom: 20px;
+  border-radius: 6px;
   height: 360px;
   width: 640px;
+  transition: 0.3s box-shadow;
+}
+@media (hover: hover) {
+  .watch__video:hover {
+    box-shadow: 0 2px 10px var(--md-header-bg-color);
+  }
 }
 .watch__navigation {
   display: flex;
   justify-content: space-between;
-  width: 100%;
 }
 .watch__btn {
   width: 40px;
@@ -22,19 +106,15 @@
   border-radius: 50%;
   background: #fff url("/assets/icons/arrow-left.svg") center no-repeat;
   background-size: 30px;
+  transition: 0.3s opacity;
   cursor: pointer;
+  display: none;
 }
 .watch__btn--next {
   transform: rotate(180deg);
 }
 .watch__btn:disabled, .watch__btn--disabled {
   opacity: 0.5;
-}
-.watch__select {
-  padding: 10px 20px;
-  border: none;
-  border-radius: 6px;
-  cursor: pointer;
 }
 
 /*# sourceMappingURL=watch.css.map */
