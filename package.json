@@ -1,0 +1,26 @@
+{
+  "name": "mpei.space",
+  "version": "1.0.0",
+  "description": "MPEI students open library",
+  "scripts": {
+    "build": "mkdocs build",
+    "watch": "mkdocs serve --dirtyreload"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Alaladdin/MPEI.git"
+  },
+  "license": "BSD3",
+  "bugs": {
+    "url": "https://github.com/Alaladdin/MPEI/issues"
+  },
+  "homepage": "https://mpei.space",
+  "devDependencies": {
+    "eslint": "^7.18.0",
+    "eslint-config-google": "^0.14.0",
+    "stylelint": "^13.9.0",
+    "stylelint-config-standard": "^20.0.0",
+    "stylelint-order": "^4.1.0",
+    "stylelint-scss": "^3.18.0"
+  }
+}

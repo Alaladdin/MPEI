@@ -1,5 +1,6 @@
 .idea
 .ignore
 .netlify
+.env
 node_modules
 site

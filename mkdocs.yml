@@ -27,7 +27,7 @@ theme:
     logo: material/library
     repo: fontawesome/brands/github-alt
 
-tag_manager: 'GTM-KFJSDNH'
+tag_manager: !!python/object/apply:os.getenv ["GOOGLE_TAG_MANAGER_TOKEN"]
 
 markdown_extensions:
   - toc:

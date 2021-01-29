@@ -12,16 +12,22 @@
     <div class='watch__player'>
       <div id='player' class='watch__video'></div>
       
-      <div class='watch__navigation'>
-        <button class='btn watch__btn watch__btn--prev watch__btn--disabled' disabled></button>
-        <div class='watch__select'></div>
-        <button class='btn watch__btn watch__btn--next'></button>
+      <div class='watch__meta'>
+        <div class='watch__error sr-only'><span class='watch__prepend highlighted'>Error</span><div class='watch__error-mess watch__append highlighted'></div></div>
+        <div class='watch__total'><span class='watch__prepend highlighted'>Count</span><span class='watch__count watch__append highlighted'>0</span></div>
+        <div class='watch__name highlighted'>Never Gonna Give You Up</div>
       </div>
+      
+      <div class='watch__navigation'>
+        <div class='watch__select'></div>
+      </div>
+
     </div>
   </div>
 
 <script src='/assets/js/components/dropDown.js'></script>
 <script src='/assets/js/watch.js'></script>
+
 
   <!-- Revision date -->
   {% if page and page.meta %}
