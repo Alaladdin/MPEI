@@ -63,6 +63,10 @@ $primary-dark: #1b1c25;
     grid-area: navigation;
   }
 
+  &__select {
+    width: 100%;
+  }
+
   // Meta
   &__meta {
     display: inline-block;
@@ -98,11 +102,6 @@ $primary-dark: #1b1c25;
 
     &__meta {
       display: none;
-    }
-
-    &__navigation,
-    &__select {
-      width: 100%;
     }
   }
 

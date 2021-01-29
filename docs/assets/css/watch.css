@@ -136,6 +136,9 @@
   justify-content: space-between;
   grid-area: navigation;
 }
+.watch__select {
+  width: 100%;
+}
 .watch__meta {
   display: inline-block;
   grid-area: meta;
@@ -160,9 +163,6 @@
   }
   .watch__meta {
     display: none;
-  }
-  .watch__navigation, .watch__select {
-    width: 100%;
   }
 
   .component-dropdown {
