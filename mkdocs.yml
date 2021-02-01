@@ -5,7 +5,7 @@ site_url: https://mpei.space/
 
 repo_url: https://github.com/Alaladdin/MPEI/
 edit_uri: edit/main/docs/
-copyright: By <a href="https://github.com/Alaladdin/"  target="_blank" rel="nofollow noopener">Alaladdin</a>
+copyright: By <a href="https://github.com/Alaladdin/" target="_blank" rel="nofollow noopener">Alaladdin</a>
 
 theme:
   name: material

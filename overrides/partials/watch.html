@@ -7,10 +7,9 @@
 <!-- Content -->
 {% block content %}
   {{ page.content }}
-
   <div class='watch'>
     <div class='watch__player'>
-      <div id='player' class='watch__video'></div>
+      <div id='player' class='watch__video' data-playlist-id='{{ page.meta.playlistId }}'></div>
       
       <div class='watch__meta'>
         <div class='watch__error sr-only'><span class='watch__prepend highlighted'>Error</span><div class='watch__error-mess watch__append highlighted'></div></div>

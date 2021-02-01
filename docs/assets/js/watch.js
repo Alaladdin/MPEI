@@ -36,8 +36,11 @@
    * @return {Promise<any>}
    */
   async function apiCall() {
+    const watchVideoPlayer = document.querySelector('.watch__video');
+    const playListID = watchVideoPlayer.dataset.playlistId;
+
     return await fetch(getUrl({
-      playListID: 'PLpjptrZp1_VedrMj81bdJQIWWNYct6lSQ',
+      playListID,
     })).then((res) => res.json()).catch((err) => createErrorMess(err));
   }
 
