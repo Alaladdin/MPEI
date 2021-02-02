@@ -6,7 +6,7 @@ $dropdown-border-radius: 6px;
 .component-dropdown {
   position: relative;
   border-radius: $dropdown-border-radius;
-  width: 100%;
+  min-width: 100%;
   max-width: 250px;
   background: var(--md-header-bg-color);
   cursor: pointer;
@@ -39,6 +39,7 @@ $dropdown-border-radius: 6px;
     position: absolute;
     display: none;
     overflow-y: auto;
+    border-top: 2px solid var(--md-code-hl-function-color);
     border-radius: 0 0 $dropdown-border-radius $dropdown-border-radius;
     width: 100%;
     max-width: 250px;
@@ -96,7 +97,6 @@ $dropdown-border-radius: 6px;
 
       &__body {
         display: block;
-        border-top: 2px solid var(--md-code-hl-function-color);
       }
     }
   }

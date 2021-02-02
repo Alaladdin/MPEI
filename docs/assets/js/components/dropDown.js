@@ -7,12 +7,16 @@
  * @return {void, boolean}
  */
 function createDropdown(
-    element, {list, selected, classPrefix = 'component-dropdown'}) {
+  element, {
+    list,
+    selected,
+    classPrefix = 'component-dropdown',
+  },
+) {
   if (typeof list !== 'object' || list.length <= 0 || element.length <= 0) {
     console.error('One of required params is empty: element, list');
     return false;
   }
-
   const container = document.querySelector(element);
   const select = document.createElement('select');
   const dropdown = document.createElement('div');
@@ -32,8 +36,7 @@ function createDropdown(
     const container = document.createElement('div');
     const current = document.createElement('div');
     const icon = document.createElementNS('http://www.w3.org/2000/svg', 'svg');
-    const iconSvgPath = document.createElementNS('http://www.w3.org/2000/svg', 'path',
-    );
+    const iconSvgPath = document.createElementNS('http://www.w3.org/2000/svg', 'path');
 
     current.textContent = title;
     icon.classList.add(`${classPrefix}__icon`);
@@ -43,7 +46,11 @@ function createDropdown(
     icon.setAttributeNS(null, 'viewBox', '0 0 24 24');
     icon.setAttributeNS(null, 'width', '24px');
     icon.setAttributeNS(null, 'height', '24px');
-    iconSvgPath.setAttributeNS(null, 'd', 'M7.41,8.58L12,13.17L16.59,8.58L18,10L12,16L6,10L7.41,8.58Z');
+    iconSvgPath.setAttributeNS(
+      null,
+      'd',
+      'M7.41,8.58L12,13.17L16.59,8.58L18,10L12,16L6,10L7.41,8.58Z',
+    );
     iconSvgPath.style.setProperty('fill', '#ffffff');
 
     icon.append(iconSvgPath);
@@ -73,7 +80,7 @@ function createDropdown(
     if (value.length <= 0) return false;
 
     const selectOptions = select.options;
-    for (let i = 0; i < selectOptions.length; i++) {
+    for (let i = 0; i < selectOptions.length; i += 1) {
       const option = selectOptions[i];
       const optionVal = option.getAttribute('value');
 
@@ -99,11 +106,10 @@ function createDropdown(
     if (value.length <= 0 || option.length <= 0) return false;
 
     // Ищем опции среди выбранных и снимаем с них отметку
-    dropdown.querySelectorAll(`.${classPrefix}__option.selected`).
-        forEach((el) => {
-          el.removeAttribute('aria-selected');
-          el.classList.remove('selected');
-        });
+    dropdown.querySelectorAll(`.${classPrefix}__option.selected`).forEach((el) => {
+      el.removeAttribute('aria-selected');
+      el.classList.remove('selected');
+    });
 
     // Помечаем опцию, как выбранную
     option.setAttribute('aria-selected', 'true');
@@ -122,7 +128,7 @@ function createDropdown(
    * @return {void}
    */
   function changeOption(option) {
-    const value = option.dataset.value;
+    const { value } = option.dataset;
     const selectResult = changeSelectOption(value);
     const dropdownResult = changeDropdownOption(value, option);
     // В случае ошибки выдаем ее в консоль
@@ -139,7 +145,7 @@ function createDropdown(
     const option = document.createElement('option');
     const dropdownOption = document.createElement('div');
     const key = Object.keys(list)[i];
-    const value = list[Object.keys(list)[i]];
+    const value = list[key];
 
     option.value = key;
     option.textContent = value;
@@ -152,8 +158,8 @@ function createDropdown(
     select.append(option);
 
     // Если передан параметр 'select' и он равен индексу, меняем выбранное значение
-    if (typeof selected !== 'undefined') {
-      (i === selected.toString()) && changeOption(dropdownOption);
+    if (typeof selected !== 'undefined' && i === selected.toString()) {
+      changeOption(dropdownOption);
     }
 
     // Меняем значение при выборе опции
@@ -162,11 +168,10 @@ function createDropdown(
 
   // Настраиваем события
   // При клике на заголовок select'a
-  dropdownHeader.container.onclick = () => dropdown.classList.toggle(
-      'is-active');
+  dropdownHeader.container.onclick = () => dropdown.classList.toggle('is-active');
 
-  // Если был нажат 'Escape', скрываем селект
-  document.body.onkeydown = (e) => (e.key === 'Escape') ? hideDropdown() : true;
+  // Если был нажат 'Escape', скрываем select
+  document.body.onkeydown = (e) => ((e.key === 'Escape') ? hideDropdown() : true);
 
   // Если фокус с select'a снят
   dropdown.onblur = () => hideDropdown();
