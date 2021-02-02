@@ -27,13 +27,12 @@
     watchTitle.textContent = videoTitle;
   };
 
-  const initPlayer = (res) => {
+  const initPlayer = () => {
     const tag = document.createElement('script');
     const firstScriptTag = document.querySelector('script');
 
     tag.src = 'https://www.youtube.com/iframe_api';
     firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
-    return res;
   };
 
   const initWatch = (data) => {
@@ -69,12 +68,13 @@
   const apiCall = async () => {
     const watchVideoPlayer = document.querySelector('.watch__video');
     const playListID = watchVideoPlayer.dataset.playlistId;
+    if (playListID.length <= 0) throw Error('playlistId not provided');
     return fetch(`https://mpei-server.herokuapp.com/api/getPlaylist/${playListID}`)
       .then((res) => res.json());
   };
 
+  initPlayer();
   apiCall()
-    .then(initPlayer)
     .then(initWatch)
     .catch((err) => createErrorMess(err.message));
 }
