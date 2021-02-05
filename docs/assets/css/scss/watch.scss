@@ -1,18 +1,55 @@
+@use 'sass:map';
+
 @import 'mixins/hover';
 @import 'components/dropDown';
+@import 'components/loader';
+@import 'extend/text-one-line';
+
+$media-breakpoints: (
+        xs: 0,
+        sm: 576px,
+        md: 768px,
+        lg: 992px,
+        xl: 1200px,
+        xxl: 1400px
+);
+
+$error-color: hsla(0, 67%, 50%, 1);
+$error-color-dark: #b22525;
+$primary-dark: #1b1c25;
 
 .watch {
-  &__player {
-    display: flex;
-    justify-content: space-between;
-    width: 100%;
+  &__prepend {
+    margin-right: -1px;
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+    background: $primary-dark;
   }
 
+  &__append {
+    border-left: 2px solid var(--md-default-fg-color--light);
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+  }
+
+  &__player {
+    display: grid;
+    align-items: flex-start;
+    justify-content: center;
+    grid-template-areas:
+      'player navigation'
+      'meta meta';
+    grid-template-columns: 3fr 1fr;
+    grid-gap: 20px;
+  }
+
+  // VideoPlayer
   &__video {
-    margin-bottom: 20px;
+    grid-area: player;
+    // margin-bottom: 20px;
     border-radius: 6px;
-    height: 360px;
     width: 640px;
+    height: 360px;
     transition: .3s box-shadow;
 
     @include hover {
@@ -20,34 +57,61 @@
     }
   }
 
+  // Navigation
   &__navigation {
-    display: flex;
+    display: inline-flex;
     justify-content: space-between;
-  }
-
-  &__btn {
-    width: 40px;
-    height: 40px;
-    border-radius: 50%;
-    background: #fff url('/assets/icons/arrow-left.svg') center no-repeat;
-    background-size: 30px;
-    transition: .3s opacity;
-    cursor: pointer;
-
-    // temp
-    display: none;
-
-    &--next {
-      transform: rotate(180deg);
-    }
-
-    &:disabled,
-    &--disabled {
-      opacity: .5;
-    }
+    grid-area: navigation;
+    height: 100%;
   }
 
   &__select {
+    width: 100%;
+  }
 
+  // Meta
+  &__meta {
+    display: inline-block;
+    grid-area: meta;
+  }
+
+  &__total,
+  &__error {
+    display: inline-block;
+  }
+
+  &__error &__prepend {
+    background-color: $error-color-dark;
+  }
+
+  &__error-mess {
+    background-color: $error-color;
+  }
+}
+
+@media screen and (max-width: map.get($media-breakpoints, 'lg')) {
+  .watch {
+    &__player {
+      align-items: center;
+      grid-template-areas:
+        'player player'
+        'navigation navigation';
+    }
+
+    &__video {
+      margin: auto;
+    }
+
+    &__meta {
+      display: none;
+    }
+  }
+
+  .component-dropdown {
+    margin: auto;
+
+    &__body {
+      position: relative;
+    }
   }
 }

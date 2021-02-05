@@ -1,5 +1,7 @@
 .idea
 .ignore
 .netlify
+.env
 node_modules
 site
+package-lock.json

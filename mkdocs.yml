@@ -5,7 +5,7 @@ site_url: https://mpei.space/
 
 repo_url: https://github.com/Alaladdin/MPEI/
 edit_uri: edit/main/docs/
-copyright: By <a href="https://github.com/Alaladdin/"  target="_blank" rel="nofollow noopener">Alaladdin</a>
+copyright: By <a href="https://github.com/Alaladdin/" target="_blank" rel="nofollow noopener">Alaladdin</a>
 
 theme:
   name: material
@@ -27,7 +27,7 @@ theme:
     logo: material/library
     repo: fontawesome/brands/github-alt
 
-tag_manager: 'GTM-KFJSDNH'
+tag_manager: !!python/object/apply:os.getenv ["GOOGLE_TAG_MANAGER_TOKEN"]
 
 markdown_extensions:
   - toc:
