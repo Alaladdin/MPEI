@@ -2,15 +2,16 @@
 
 @import 'mixins/hover';
 @import 'components/dropDown';
+@import 'components/loader';
 @import 'extend/text-one-line';
 
 $media-breakpoints: (
-  xs: 0,
-  sm: 576px,
-  md: 768px,
-  lg: 992px,
-  xl: 1200px,
-  xxl: 1400px
+        xs: 0,
+        sm: 576px,
+        md: 768px,
+        lg: 992px,
+        xl: 1200px,
+        xxl: 1400px
 );
 
 $error-color: hsla(0, 67%, 50%, 1);
@@ -61,6 +62,7 @@ $primary-dark: #1b1c25;
     display: inline-flex;
     justify-content: space-between;
     grid-area: navigation;
+    height: 100%;
   }
 
   &__select {

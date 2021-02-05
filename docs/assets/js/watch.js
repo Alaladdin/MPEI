@@ -1,6 +1,40 @@
 {
   let player;
 
+  class Loader {
+    constructor(el) {
+      this.el = el;
+      this.loader = document.createElement('div');
+    }
+
+    create() {
+      this.funnies = [
+        'сервер спит, нужно чутка подождать, пока проснется',
+        'обработка твоих личных данных чего-то затянулась',
+        'жирафы крутые',
+        'шея жирафа может достигать двух метров, да-да',
+        'коалы тоже бомбезные',
+        'самое старое существо на Земле - моллюск Мин. В 2013 году ему было 507 лет!',
+        'баобаб',
+        'да ты походи, сервер сейчас проснется, ответит',
+        'здесь не могло быть вашей рекламы',
+        'ʕ•ᴥ•ʔ',
+        'ты наш мильенный посетитель',
+        'утренние новости ночью с мистером коалой',
+        'интересных фактов на всех не хватит, придется драться',
+      ];
+      this.loader.classList.add('loader');
+      this.loader.dataset.content = this.funnies[Math.floor(Math.random() * this.funnies.length)];
+      this.el.append(this.loader);
+    }
+
+    delete() {
+      this.el.removeChild(this.loader);
+    }
+  }
+
+  const dropdownLoader = new Loader(document.querySelector('.watch__select'));
+
   /**
    * Creates YouTube video player
    * @return {void}
@@ -73,8 +107,13 @@
       .then((res) => res.json());
   };
 
+  dropdownLoader.create();
   initPlayer();
   apiCall()
+    .then((data) => {
+      dropdownLoader.delete();
+      return data;
+    })
     .then(initWatch)
     .catch((err) => createErrorMess(err.message));
 }

@@ -105,9 +105,11 @@ $dropdown-border-radius: 6px;
 @keyframes fadeIn {
   from {
     max-height: 0;
+    opacity: 0;
   }
 
   to {
     max-height: 300px;
+    opacity: 1;
   }
 }
