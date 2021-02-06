@@ -1,13 +1,22 @@
-$dropdown-border-radius: 6px;
+@use 'sass:map';
 
 @import '../mixins/hover';
 @import '../extend/text-one-line';
+
+$dropdown-border-radius: 6px;
+$media-breakpoints: (
+  xs: 0,
+  sm: 576px,
+  md: 768px,
+  lg: 992px,
+  xl: 1200px,
+  xxl: 1400px
+);
 
 .component-dropdown {
   position: relative;
   border-radius: $dropdown-border-radius;
   width: 100%;
-  max-width: 250px;
   background: var(--md-header-bg-color);
   cursor: pointer;
   user-select: none;
@@ -42,8 +51,6 @@ $dropdown-border-radius: 6px;
     border-top: 2px solid var(--md-code-hl-function-color);
     border-radius: 0 0 $dropdown-border-radius $dropdown-border-radius;
     width: 100%;
-    max-width: 250px;
-    z-index: 99;
     background: var(--md-header-bg-color);
     animation: fadeIn .2s forwards;
 
@@ -71,7 +78,7 @@ $dropdown-border-radius: 6px;
     transition: all 100ms;
     transition-property: background-color, color;
 
-    &:hover {
+    @include hover {
       background-color: var(--md-code-hl-function-color);
       color: #fff;
     }
@@ -79,7 +86,7 @@ $dropdown-border-radius: 6px;
     &.selected {
       border-left: 3px solid var(--md-code-hl-function-color);
 
-      &:hover {
+      @include hover {
         border-color: #fff;
       }
     }
@@ -111,5 +118,15 @@ $dropdown-border-radius: 6px;
   to {
     max-height: 300px;
     opacity: 1;
+  }
+}
+
+@media (min-width: map.get($media-breakpoints, 'sm')) {
+  .component-dropdown {
+    max-width: 250px;
+
+    &__body {
+      max-width: 250px;
+    }
   }
 }
