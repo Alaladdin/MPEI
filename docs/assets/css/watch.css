@@ -7,7 +7,7 @@
 .component-dropdown {
   position: relative;
   border-radius: 6px;
-  min-width: 100%;
+  width: 100%;
   max-width: 250px;
   background: var(--md-header-bg-color);
   cursor: pointer;

@@ -6,7 +6,7 @@ $dropdown-border-radius: 6px;
 .component-dropdown {
   position: relative;
   border-radius: $dropdown-border-radius;
-  min-width: 100%;
+  width: 100%;
   max-width: 250px;
   background: var(--md-header-bg-color);
   cursor: pointer;
