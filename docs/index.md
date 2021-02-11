@@ -1,6 +1,7 @@
 ---
 template: home.html
-
+hide:
+    - toc
 links:
     english:
         title: Английский
@@ -10,6 +11,10 @@ links:
         title: Мат. Анализ
         icon: assets/img/math__orig.webp
         url: /math/
+    probability_theory:
+        title: Теория вер.
+        icon: assets/img/probability.webp
+        url: /probability/
     oib:
         title: ОИБ
         icon: assets/img/oib.webp
