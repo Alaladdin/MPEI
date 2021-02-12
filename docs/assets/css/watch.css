@@ -69,11 +69,6 @@
 .component-dropdown__option.selected {
   border-left: 3px solid var(--md-code-hl-function-color);
 }
-@media (hover: hover) {
-  .component-dropdown__option.selected:hover {
-    border-color: #fff;
-  }
-}
 .component-dropdown.is-active {
   border-bottom-right-radius: 0;
   border-bottom-left-radius: 0;

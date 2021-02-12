@@ -85,10 +85,6 @@ $media-breakpoints: (
 
     &.selected {
       border-left: 3px solid var(--md-code-hl-function-color);
-
-      @include hover {
-        border-color: #fff;
-      }
     }
   }
 
