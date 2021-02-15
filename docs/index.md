@@ -3,10 +3,6 @@ template: home.html
 hide:
     - toc
 links:
-    english:
-        title: Английский
-        icon: assets/img/english.webp
-        url: /english/
     math:
         title: Мат. Анализ
         icon: assets/img/math__orig.webp
@@ -15,14 +11,18 @@ links:
         title: Теория вер.
         icon: assets/img/probability.webp
         url: /probability/
-    oib:
-        title: ОИБ
-        icon: assets/img/oib.webp
-        url: /oib/
+    english:
+        title: Английский
+        icon: assets/img/english.webp
+        url: /english/
     inf:
         title: Инф-ка
         icon: assets/img/informatics.webp
         url: /inf/
+    oib:
+        title: ОИБ
+        icon: assets/img/oib.webp
+        url: /oib/
     history:
         title: История
         icon: assets/img/history.webp
