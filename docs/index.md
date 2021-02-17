@@ -3,9 +3,13 @@ template: home.html
 hide:
     - toc
 links:
+    physics:
+        title: Физика
+        icon: assets/img/physics.webp
+        url: /physics/
     math:
         title: Мат. Анализ
-        icon: assets/img/math__orig.webp
+        icon: assets/img/math.webp
         url: /math/
     probability_theory:
         title: Теория вер.
