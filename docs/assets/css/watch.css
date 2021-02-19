@@ -188,6 +188,9 @@
   }
   .watch__video {
     margin: auto;
+    height: 40vw;
+    min-height: 150px;
+    max-height: 640px;
   }
   .watch__meta {
     display: none;

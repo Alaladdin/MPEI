@@ -1,5 +1,5 @@
 {
-  let player;
+  var player;
 
   class Loader {
     constructor(el) {
@@ -10,7 +10,6 @@
     create() {
       this.funnies = [
         'сервер спит, нужно чутка подождать, пока проснется',
-        'обработка твоих личных данных чего-то затянулась',
         'жирафы крутые',
         'шея жирафа может достигать двух метров, да-да',
         'коалы тоже бомбезные',
@@ -35,6 +34,14 @@
 
   const dropdownLoader = new Loader(document.querySelector('.watch__select'));
 
+  const initPlayer = () => {
+    const tag = document.createElement('script');
+    const firstScriptTag = document.querySelector('script');
+
+    tag.src = 'https://www.youtube.com/iframe_api';
+    firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
+  };
+
   /**
    * Creates YouTube video player
    * @return {void}
@@ -54,19 +61,9 @@
    */
   const changeWatch = (videoId, videoTitle) => {
     const watchTitle = document.querySelector('.watch__name');
-    player.loadVideoById({
-      videoId,
-      autoplay: 0,
-    });
+
+    player.cueVideoById(videoId);
     watchTitle.textContent = videoTitle;
-  };
-
-  const initPlayer = () => {
-    const tag = document.createElement('script');
-    const firstScriptTag = document.querySelector('script');
-
-    tag.src = 'https://www.youtube.com/iframe_api';
-    firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
   };
 
   const initWatch = (data) => {
@@ -91,6 +88,7 @@
     if (mess.length <= 0) return;
     const watchError = document.querySelector('.watch__error');
     const watchErrorMess = document.querySelector('.watch__error-mess');
+
     watchError.classList.remove('sr-only');
     watchErrorMess.textContent = mess;
   };
@@ -102,7 +100,9 @@
   const apiCall = async () => {
     const watchVideoPlayer = document.querySelector('.watch__video');
     const playListID = watchVideoPlayer.dataset.playlistId;
+
     if (playListID.length <= 0) throw Error('playlistId not provided');
+
     return fetch(`https://mpei-server.herokuapp.com/api/getPlaylist/${playListID}`)
       .then((res) => res.json());
   };

@@ -4,8 +4,8 @@
   "description": "MPEI students open library",
   "scripts": {
     "build": "mkdocs build",
-    "watch": "mkdocs serve",
-    "watch:dirty": "mkdocs serve --dirtyreload"
+    "dev": "mkdocs serve -a 0.0.0.0:8000",
+    "dev:dirty": "mkdocs serve -a 0.0.0.0:8000 --dirtyreload"
   },
   "repository": {
     "type": "git",
