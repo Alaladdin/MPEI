@@ -27,7 +27,7 @@ theme:
     logo: material/library
     repo: fontawesome/brands/github-alt
 
-tag_manager: !!python/object/apply:os.getenv ["GOOGLE_TAG_MANAGER_TOKEN"]
+tag_manager: GTM-KFJSDNH
 
 markdown_extensions:
   - toc:
@@ -41,6 +41,7 @@ markdown_extensions:
   - pymdownx.mark
   - pymdownx.caret
   - pymdownx.details
+  - pymdownx.arithmatex
   #  - pymdownx.tasklist:
   #      custom_checkbox: true
   - pymdownx.emoji:
@@ -67,3 +68,6 @@ plugins:
 
 extra_css:
   - 'assets/css/main.css'
+
+extra_javascript:
+  - https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-MML-AM_CHTML

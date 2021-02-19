@@ -7,8 +7,7 @@
 .component-dropdown {
   position: relative;
   border-radius: 6px;
-  min-width: 100%;
-  max-width: 250px;
+  width: 100%;
   background: var(--md-header-bg-color);
   cursor: pointer;
   user-select: none;
@@ -38,8 +37,6 @@
   border-top: 2px solid var(--md-code-hl-function-color);
   border-radius: 0 0 6px 6px;
   width: 100%;
-  max-width: 250px;
-  z-index: 99;
   background: var(--md-header-bg-color);
   animation: fadeIn 0.2s forwards;
 }
@@ -63,15 +60,14 @@
   transition: all 100ms;
   transition-property: background-color, color;
 }
-.component-dropdown__option:hover {
-  background-color: var(--md-code-hl-function-color);
-  color: #fff;
+@media (hover: hover) {
+  .component-dropdown__option:hover {
+    background-color: var(--md-code-hl-function-color);
+    color: #fff;
+  }
 }
 .component-dropdown__option.selected {
   border-left: 3px solid var(--md-code-hl-function-color);
-}
-.component-dropdown__option.selected:hover {
-  border-color: #fff;
 }
 .component-dropdown.is-active {
   border-bottom-right-radius: 0;
@@ -93,6 +89,14 @@
   to {
     max-height: 300px;
     opacity: 1;
+  }
+}
+@media (min-width: 576px) {
+  .component-dropdown {
+    max-width: 250px;
+  }
+  .component-dropdown__body {
+    max-width: 250px;
   }
 }
 .loader {
@@ -145,8 +149,9 @@
 .watch__video {
   grid-area: player;
   border-radius: 6px;
-  width: 640px;
-  height: 360px;
+  width: 100%;
+  min-height: 100%;
+  max-height: 360px;
   transition: 0.3s box-shadow;
 }
 @media (hover: hover) {
@@ -184,6 +189,9 @@
   }
   .watch__video {
     margin: auto;
+    height: 40vw;
+    min-height: 150px;
+    max-height: 640px;
   }
   .watch__meta {
     display: none;
