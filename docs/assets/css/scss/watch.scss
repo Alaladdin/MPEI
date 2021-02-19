@@ -6,12 +6,12 @@
 @import 'extend/text-one-line';
 
 $media-breakpoints: (
-        xs: 0,
-        sm: 576px,
-        md: 768px,
-        lg: 992px,
-        xl: 1200px,
-        xxl: 1400px
+  xs: 0,
+  sm: 576px,
+  md: 768px,
+  lg: 992px,
+  xl: 1200px,
+  xxl: 1400px
 );
 
 $error-color: hsla(0, 67%, 50%, 1);
@@ -47,8 +47,9 @@ $primary-dark: #1b1c25;
   &__video {
     grid-area: player;
     border-radius: 6px;
-    width: 640px;
-    height: 360px;
+    width: 100%;
+    min-height: 100%;
+    max-height: 360px;
     transition: .3s box-shadow;
 
     @include hover {
@@ -99,6 +100,9 @@ $primary-dark: #1b1c25;
 
     &__video {
       margin: auto;
+      height: 40vw;
+      min-height: 150px;
+      max-height: 640px;
     }
 
     &__meta {

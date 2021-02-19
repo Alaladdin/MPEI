@@ -149,8 +149,9 @@
 .watch__video {
   grid-area: player;
   border-radius: 6px;
-  width: 640px;
-  height: 360px;
+  width: 100%;
+  min-height: 100%;
+  max-height: 360px;
   transition: 0.3s box-shadow;
 }
 @media (hover: hover) {
@@ -188,6 +189,9 @@
   }
   .watch__video {
     margin: auto;
+    height: 40vw;
+    min-height: 150px;
+    max-height: 640px;
   }
   .watch__meta {
     display: none;
