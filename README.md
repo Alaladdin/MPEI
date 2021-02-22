@@ -17,18 +17,24 @@
 [расширения PyMdown](https://facelessuser.github.io/pymdown-extensions/installation/) и
 тему [Material for MkDocs](https://squidfunk.github.io/mkdocs-material/):
 
-```
-pip3 install -r ./requirements.txt
+``` shell
+pip install -r ./requirements.txt
 ```
 
 Сборка проекта:
 
-```
-mkdocs build
+``` shell
+npm run build
 ```
 
 Режим разработчика:
 
+``` shell
+npm run dev
 ```
-mkdocs serve --dirtyreload
+
+или
+
+``` shell
+npm run dev:dirty
 ```
