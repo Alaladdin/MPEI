@@ -5,3 +5,4 @@
 node_modules
 site
 package-lock.json
+*full.*
