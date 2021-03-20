@@ -44,7 +44,7 @@
   text-align: right;
 }
 .actuality.show .actuality__body {
-  max-height: 500px;
+  max-height: 400px;
 }
 
 .md-sidebar {
@@ -128,10 +128,12 @@
 }
 @media (min-width: 1200px) {
   .home__container {
+    align-items: flex-start;
     flex-direction: row;
   }
   .home__layout {
     margin-right: 40px;
+    margin-bottom: 0;
   }
   .home__sidebar {
     max-width: 400px;
