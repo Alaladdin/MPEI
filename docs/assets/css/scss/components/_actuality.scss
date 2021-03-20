@@ -1,0 +1,46 @@
+.actuality {
+  overflow: hidden;
+  border-radius: 4px;
+  width: 100%;
+  height: 100%;
+  background: var(--md-header-bg-color);
+  box-shadow: 0 0 10px rgba(0, 0, 0, .2);
+
+  &__header,
+  &__footer {
+    padding: 10px 40px;
+    background-color: rgba(0, 0, 0, .26);
+    user-select: none;
+  }
+
+  &__header {
+    font-weight: bold;
+    font-size: .85rem;
+    text-align: center;
+    text-transform: uppercase;
+    cursor: pointer;
+  }
+
+  &__body {
+    overflow-y: scroll;
+    max-height: 0;
+    transition: max-height .3s;
+
+    @import 'scrollbar';
+  }
+
+  &__content {
+    padding: 20px 40px;
+  }
+
+  &__footer {
+    color: #6c757d;
+    text-align: right;
+  }
+
+  &.show {
+    .actuality__body {
+      max-height: 500px;
+    }
+  }
+}

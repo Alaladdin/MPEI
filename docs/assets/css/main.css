@@ -40,5 +40,8 @@
 .md-tabs {
   background-color: var(--md-primary-fg-color--transparent);
 }
+.text-center {
+  text-align: center;
+}
 
 /*# sourceMappingURL=main.css.map */

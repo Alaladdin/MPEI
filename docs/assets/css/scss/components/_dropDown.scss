@@ -54,21 +54,7 @@ $media-breakpoints: (
     background: var(--md-header-bg-color);
     animation: fadeIn .2s forwards;
 
-    &::-webkit-scrollbar {
-      width: 4px;
-      background: var(--md-header-bg-color);
-
-      &-thumb {
-        border-radius: 5px;
-        background: var(--md-code-hl-function-color);
-        background-clip: padding-box;
-        transition: .2s all;
-      }
-
-      &-track {
-        background: var(--md-header-bg-color);
-      }
-    }
+    @import 'scrollbar';
   }
 
   &__option {

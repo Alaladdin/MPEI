@@ -1,4 +1,5 @@
 @import 'mixins/hover';
+@import 'components/actuality';
 
 .md {
   &-sidebar {
@@ -10,11 +11,28 @@
   }
 }
 
+.home {
+  &__container {
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__layout {
+    margin-bottom: 40px;
+  }
+
+  &__sidebar {
+    margin: 0 auto;
+    width: 100%;
+  }
+}
+
 .layout {
   display: grid;
   align-items: flex-start;
+  flex-grow: 2;
   grid-template-columns: 1fr 1fr;
-  grid-gap: 1rem;
+  grid-gap: 2rem 1rem;
 
   .cell {
     display: flex;
@@ -82,6 +100,22 @@
 
     &-6 {
       grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+    }
+  }
+}
+
+@media (min-width: 1200px) {
+  .home {
+    &__container {
+      flex-direction: row;
+    }
+
+    &__layout {
+      margin-right: 40px;
+    }
+
+    &__sidebar {
+      max-width: 400px;
     }
   }
 }
