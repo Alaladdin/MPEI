@@ -8,6 +8,9 @@
 
 [:fontawesome-solid-file-download:](files/conspectus_01.pdf){:download='conspectus_01.pdf'} [Конспект с сайта MEI](files/conspectus_01.pdf){:target='_blank'}
 
+[:fontawesome-solid-file-download:](files/lection_01.pdf){:download='lection_01.pdf'} [Лекция 1. Презентация](files/lection_01.pdf){:target='_blank'}
+
 ### Конспекты
 
-- [Лекция 1](conspectus/1/)
+- [Лекция 1](conspectus/01/)
+- [Практика 1](conspectus/02/)
