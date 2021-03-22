@@ -1,6 +1,5 @@
 document.addEventListener('DOMContentLoaded', async () => {
   const actualityEl = document.querySelector('.actuality');
-  // const actualityHeaderEl = actualityEl.querySelector('.actuality__header');
 
   const normalizeLineBreaks = (text) => text.replace(/(?:\r\n|\r|\n)/g, '<br>');
   const formatDate = (dateString) => {
@@ -15,10 +14,10 @@ document.addEventListener('DOMContentLoaded', async () => {
 
   const writeActuality = (actualityBody, actualityFooter) => {
     const actualityBodyEl = actualityEl.querySelector('.actuality__content');
-    const actualityFooterEl = actualityEl.querySelector('.actuality__update-date');
+    const actualityFooterEl = actualityEl.querySelector('.actuality__footer');
 
     actualityBodyEl.innerHTML = normalizeLineBreaks(actualityBody);
-    if (actualityFooter) actualityFooterEl.textContent = formatDate(actualityFooter);
+    if (actualityFooter) actualityFooterEl.textContent = `Последнее обновление: ${formatDate(actualityFooter)}`;
   };
 
   // get actuality
@@ -30,7 +29,7 @@ document.addEventListener('DOMContentLoaded', async () => {
     })
     .catch((err) => {
       console.error(err);
-      writeActuality('Ошибка при загрузке 😞');
+      writeActuality('Ошибка загрузки 😞');
     });
 
   // main side
@@ -47,8 +46,4 @@ document.addEventListener('DOMContentLoaded', async () => {
       writeActuality('Актуалочка пустая😢');
     }
   }
-
-  // actualityHeaderEl.addEventListener('click', () => {
-  //   actualityEl.classList.toggle('show');
-  // });
 });

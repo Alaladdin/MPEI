@@ -18,13 +18,10 @@
     font-size: .85rem;
     text-align: center;
     text-transform: uppercase;
-    cursor: pointer;
   }
 
   &__body {
-    overflow-y: scroll;
-    max-height: 0;
-    transition: max-height .3s;
+    max-height: 400px;
 
     @import 'scrollbar';
   }
@@ -35,12 +32,7 @@
 
   &__footer {
     color: #6c757d;
+    font-size: 80%;
     text-align: right;
-  }
-
-  &.show {
-    .actuality__body {
-      max-height: 400px;
-    }
   }
 }

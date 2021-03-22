@@ -16,12 +16,9 @@
   font-size: 0.85rem;
   text-align: center;
   text-transform: uppercase;
-  cursor: pointer;
 }
 .actuality__body {
-  overflow-y: scroll;
-  max-height: 0;
-  transition: max-height 0.3s;
+  max-height: 400px;
 }
 .actuality__body::-webkit-scrollbar {
   width: 4px;
@@ -41,10 +38,8 @@
 }
 .actuality__footer {
   color: #6c757d;
+  font-size: 80%;
   text-align: right;
-}
-.actuality.show .actuality__body {
-  max-height: 400px;
 }
 
 .md-sidebar {
