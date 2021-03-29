@@ -144,6 +144,7 @@
   }
   .home__sidebar {
     flex-direction: column;
+    overflow-y: auto;
     max-width: 400px;
   }
 
