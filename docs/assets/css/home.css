@@ -1,3 +1,48 @@
+.actuality {
+  overflow: hidden;
+  border-radius: 4px;
+  width: 100%;
+  height: 100%;
+  background: var(--md-header-bg-color);
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+.actuality__header, .actuality__footer {
+  padding: 10px 40px;
+  background-color: rgba(0, 0, 0, 0.26);
+  user-select: none;
+}
+.actuality__header {
+  font-weight: bold;
+  font-size: 0.85rem;
+  text-align: center;
+  text-transform: uppercase;
+}
+.actuality__body {
+  overflow-y: auto;
+  max-height: 400px;
+}
+.actuality__body::-webkit-scrollbar {
+  width: 4px;
+  background: var(--md-header-bg-color);
+}
+.actuality__body::-webkit-scrollbar-thumb {
+  border-radius: 5px;
+  background: var(--md-code-hl-function-color);
+  background-clip: padding-box;
+  transition: 0.2s all;
+}
+.actuality__body::-webkit-scrollbar-track {
+  background: var(--md-header-bg-color);
+}
+.actuality__content {
+  padding: 20px 40px;
+}
+.actuality__footer {
+  color: #6c757d;
+  font-size: 80%;
+  text-align: right;
+}
+
 .md-sidebar {
   display: none;
 }
@@ -5,11 +50,36 @@
   max-width: 100%;
 }
 
+.home__container {
+  display: flex;
+  flex-direction: column;
+}
+.home__layout {
+  margin-bottom: 40px;
+}
+.home__sidebar {
+  display: flex;
+  flex-direction: column-reverse;
+  margin-right: auto;
+  margin-left: auto;
+  width: 100%;
+}
+.home__actuality {
+  margin-bottom: 20px;
+}
+
+.sidebar__link {
+  display: block;
+  margin-bottom: 10px;
+  text-align: center;
+}
+
 .layout {
   display: grid;
   align-items: flex-start;
+  flex-grow: 2;
   grid-template-columns: 1fr 1fr;
-  grid-gap: 1rem;
+  grid-gap: 2rem 1rem;
 }
 .layout .cell {
   display: flex;
@@ -62,6 +132,24 @@
   }
   .layout-6 {
     grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+  }
+}
+@media (min-width: 1200px) {
+  .home__container {
+    align-items: flex-start;
+    flex-direction: row;
+  }
+  .home__layout {
+    margin-right: 40px;
+    margin-bottom: 0;
+  }
+  .home__sidebar {
+    flex-direction: column;
+    max-width: 400px;
+  }
+
+  .sidebar__link {
+    margin-bottom: 0;
   }
 }
 

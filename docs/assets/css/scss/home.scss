@@ -1,4 +1,5 @@
 @import 'mixins/hover';
+@import 'components/actuality';
 
 .md {
   &-sidebar {
@@ -10,11 +11,43 @@
   }
 }
 
+.home {
+  &__container {
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__layout {
+    margin-bottom: 40px;
+  }
+
+  &__sidebar {
+    display: flex;
+    flex-direction: column-reverse;
+    margin-right: auto;
+    margin-left: auto;
+    width: 100%;
+  }
+
+  &__actuality {
+    margin-bottom: 20px;
+  }
+}
+
+.sidebar {
+  &__link {
+    display: block;
+    margin-bottom: 10px;
+    text-align: center;
+  }
+}
+
 .layout {
   display: grid;
   align-items: flex-start;
+  flex-grow: 2;
   grid-template-columns: 1fr 1fr;
-  grid-gap: 1rem;
+  grid-gap: 2rem 1rem;
 
   .cell {
     display: flex;
@@ -83,5 +116,28 @@
     &-6 {
       grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
     }
+  }
+}
+
+@media (min-width: 1200px) {
+  .home {
+    &__container {
+      align-items: flex-start;
+      flex-direction: row;
+    }
+
+    &__layout {
+      margin-right: 40px;
+      margin-bottom: 0;
+    }
+
+    &__sidebar {
+      flex-direction: column;
+      max-width: 400px;
+    }
+  }
+
+  .sidebar__link {
+    margin-bottom: 0;
   }
 }

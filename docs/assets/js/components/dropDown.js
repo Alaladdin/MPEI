@@ -32,7 +32,7 @@ function createDropdown(
    * @param {string} title
    * @return {{container: HTMLDivElement, current: HTMLDivElement}}
    */
-  function createDropdownHeader(title = 'Choose...') {
+  function createDropdownHeader(title = 'Выберите...') {
     const container = document.createElement('div');
     const current = document.createElement('div');
     const icon = document.createElementNS('http://www.w3.org/2000/svg', 'svg');
