@@ -19,6 +19,7 @@ links:
         title: Английский
         icon: assets/img/english.webp
         url: /english/
+        not_ready: true
     inf:
         title: Инф-ка
         icon: assets/img/informatics.webp
