@@ -11,6 +11,19 @@
   }
 }
 
+// remove menu icon and enable logo
+.md-header-nav__button {
+  @media screen and (max-width: 76.1875em) {
+    &.md-logo {
+      display: block;
+    }
+
+    &.md-icon {
+      display: none;
+    }
+  }
+}
+
 .home {
   &__container {
     display: flex;

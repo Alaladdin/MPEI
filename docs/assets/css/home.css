@@ -50,6 +50,15 @@
   max-width: 100%;
 }
 
+@media screen and (max-width: 76.1875em) {
+  .md-header-nav__button.md-logo {
+    display: block;
+  }
+  .md-header-nav__button.md-icon {
+    display: none;
+  }
+}
+
 .home__container {
   display: flex;
   flex-direction: column;

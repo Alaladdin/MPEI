@@ -1,36 +1,47 @@
 // @todo permanent cache / cache with time limit / exclude from cache
-const CACHE_VERSION = 'cache-v4';
+const CACHE_VERSION = 'cache-v1';
 const allowedCacheHosts = [
-  'https://beta.mpei.space',
-  'https://mpei.space',
+  self.location.origin,
   'https://mpei-server.herokuapp.com',
   'https://fonts.gstatic.com',
   'https://api.netlify.com',
-  'http://localhost:8000',
 ];
 const filesToCache = [
   '/',
   '/assets/css/main.css',
   '/assets/css/home.css',
+
   '/assets/js/main.js',
   '/assets/js/homepage.js',
-  '/css/timeago.css',
 
-  '/js/timeago.min.js',
-  '/js/timeago_mkdocs_material.js',
   '/assets/img/physics.webp',
-
   '/assets/img/math.webp',
   '/assets/img/probability.webp',
   '/assets/img/english.webp',
   '/assets/img/informatics.webp',
   '/assets/img/oib.webp',
   '/assets/img/history.webp',
+
+  'https://mpei-server.herokuapp.com/api/getActuality',
 ];
+
+// update cache
+const updateCache = async (request) => {
+  const cache = await caches.open(CACHE_VERSION);
+  return fetch(request)
+    .then((response) => cache.put(request.url, response.clone()));
+};
+
+// Return from cache, if exists
+const fromCache = async (request) => {
+  const cache = await caches.open(CACHE_VERSION);
+  return cache.match(request)
+    .then((response) => response || Promise.reject('no-match'));
+};
 
 // Install
 self.addEventListener('install', (e) => {
-  console.log('[SW] Installing');
+  console.log('[SW] Installing...');
   self.skipWaiting();
 
   e.waitUntil(
@@ -54,20 +65,6 @@ self.addEventListener('activate', async (e) => {
       .then(() => console.log(`[SW] Cache: ${CACHE_VERSION}`)),
   );
 });
-
-// update cache
-const updateCache = async (request) => {
-  const cache = await caches.open(CACHE_VERSION);
-  return fetch(request)
-    .then((response) => cache.put(request.url, response.clone()));
-};
-
-// Return from cache, if exists
-const fromCache = async (request) => {
-  const cache = await caches.open(CACHE_VERSION);
-  return cache.match(request)
-    .then((response) => response || Promise.reject('no-match'));
-};
 
 // Fetch
 self.addEventListener('fetch', (e) => {
