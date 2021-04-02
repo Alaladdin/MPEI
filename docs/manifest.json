@@ -2,7 +2,7 @@
   "name": "mpei.space",
   "short_name": "MPEI",
   "description": "MPEI students open library",
-  "display": "minimal-ui",
+  "display": "standalone",
   "start_url": "/?source=pwa",
   "scope": "/",
   "background_color": "#1e2029",

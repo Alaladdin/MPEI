@@ -19,7 +19,7 @@
 }
 .actuality__body {
   overflow-y: auto;
-  max-height: 400px;
+  max-height: clamp(200px, 60vh, 350px);
 }
 .actuality__body::-webkit-scrollbar {
   width: 4px;

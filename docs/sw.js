@@ -1,4 +1,12 @@
-const CACHE_VERSION = 'cache-v8';
+// @todo permanent cache / cache with time limit / exclude from cache
+const CACHE_VERSION = 'cache-v4';
+const allowedCacheHosts = [
+  'https://mpei.space',
+  'https://mpei-server.herokuapp.com',
+  'https://fonts.gstatic.com',
+  'https://api.netlify.com',
+  'http://localhost:8000',
+];
 const filesToCache = [
   '/',
   '/assets/css/main.css',
@@ -24,10 +32,10 @@ self.addEventListener('install', (e) => {
   console.log('[SW] Installing');
   self.skipWaiting();
 
-  e.waitUntil((async () => {
-    const cache = await caches.open(CACHE_VERSION);
-    await cache.addAll(filesToCache);
-  })());
+  e.waitUntil(
+    caches.open(CACHE_VERSION)
+      .then((cache) => cache.addAll(filesToCache)),
+  );
 });
 
 // Activate
@@ -36,17 +44,47 @@ self.addEventListener('activate', async (e) => {
 
   e.waitUntil(
     caches.keys()
-      .then((keys) => Promise
-        .all(keys.map((key) => {
+      .then((keys) => Promise.all(
+        keys.map((key) => {
           if (key === CACHE_VERSION) return;
           return caches.delete(key);
-        })))
+        }),
+      ))
       .then(() => console.log(`[SW] Cache: ${CACHE_VERSION}`)),
   );
 });
 
+// update cache
+const updateCache = async (request) => {
+  const cache = await caches.open(CACHE_VERSION);
+  return fetch(request)
+    .then((res) => cache.put(request.url, res.clone()));
+};
+
+// Return from cache, if exists
+const fromCache = async (request) => {
+  const cache = await caches.open(CACHE_VERSION);
+  return cache.match(request)
+    .then((matching) => matching || Promise.reject('no-match'));
+};
+
 // Fetch
 self.addEventListener('fetch', (e) => {
-  // if (e.request.method !== 'GET') return;
-  console.log('fetching');
+  const { request } = e;
+  const { origin } = new URL(request.url);
+
+  // Не обрабатываем домены не из списка разрешенных и не GET запросы
+  if (!allowedCacheHosts.includes(origin) || request.method !== 'GET') {
+    return fetch(request)
+      .catch((err) => console.log(err));
+  }
+
+  // response immediately
+  e.respondWith(
+    fromCache(request)
+      .catch(() => fetch(request)),
+  );
+
+  // update cache
+  e.waitUntil(updateCache(request));
 });
