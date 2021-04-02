@@ -51,10 +51,12 @@
 }
 
 @media screen and (max-width: 76.1875em) {
-  .md-header-nav__button.md-logo {
+  .md-header-nav__button.md-logo,
+.md-header__button.md-logo {
     display: block;
   }
-  .md-header-nav__button.md-icon {
+  .md-header-nav__button.md-icon,
+.md-header__button.md-icon {
     display: none;
   }
 }

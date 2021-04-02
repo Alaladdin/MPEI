@@ -30,6 +30,8 @@ document.addEventListener('DOMContentLoaded', () => {
     networkStatusText.textContent = condition;
   };
 
+  pwaInstall.onclick = (e) => e.preventDefault();
+
   // pwa install prompt
   window.addEventListener('beforeinstallprompt', (e) => {
     // Prevent from automatically showing the prompt
