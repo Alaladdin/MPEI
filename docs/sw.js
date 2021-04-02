@@ -1,4 +1,4 @@
-const CACHE_VERSION = 'offline-v1.0';
+const CACHE_VERSION = 'offline-v1';
 const allowedCacheHosts = [
   self.location.origin,
   'https://mpei-server.herokuapp.com',
