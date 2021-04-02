@@ -1,6 +1,7 @@
 // @todo permanent cache / cache with time limit / exclude from cache
 const CACHE_VERSION = 'cache-v4';
 const allowedCacheHosts = [
+  'https://beta.mpei.space',
   'https://mpei.space',
   'https://mpei-server.herokuapp.com',
   'https://fonts.gstatic.com',
@@ -58,14 +59,14 @@ self.addEventListener('activate', async (e) => {
 const updateCache = async (request) => {
   const cache = await caches.open(CACHE_VERSION);
   return fetch(request)
-    .then((res) => cache.put(request.url, res.clone()));
+    .then((response) => cache.put(request.url, response.clone()));
 };
 
 // Return from cache, if exists
 const fromCache = async (request) => {
   const cache = await caches.open(CACHE_VERSION);
   return cache.match(request)
-    .then((matching) => matching || Promise.reject('no-match'));
+    .then((response) => response || Promise.reject('no-match'));
 };
 
 // Fetch
