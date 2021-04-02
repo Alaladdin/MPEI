@@ -60,6 +60,9 @@
 .md-tabs {
   background-color: var(--md-primary-fg-color--transparent);
 }
+.md-footer-links {
+  margin: auto 0.6rem;
+}
 .md-footer-links__header {
   margin-bottom: 10px;
 }
