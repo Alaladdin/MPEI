@@ -3,7 +3,7 @@
   "short_name": "MPEI",
   "description": "MPEI students open library",
   "display": "standalone",
-  "start_url": "/?source=pwa",
+  "start_url": "/?utm_source=pwa",
   "scope": "/",
   "background_color": "#1e2029",
   "theme_color": "#bf95f9",
@@ -251,62 +251,6 @@
     {
       "src": "/pwa/icons/windows/windows-storelogo-50-50.png",
       "sizes": "50x50"
-    },
-    {
-      "src": "/pwa/icons/windows/windowsphone-appicon-106-106.png",
-      "sizes": "106x106"
-    },
-    {
-      "src": "/pwa/icons/windows/windowsphone-appicon-62-62.png",
-      "sizes": "62x62"
-    },
-    {
-      "src": "/pwa/icons/windows/windowsphone-appicon-44-44.png",
-      "sizes": "44x44"
-    },
-    {
-      "src": "/pwa/icons/windows/windowsphone-mediumtile-360-360.png",
-      "sizes": "360x360"
-    },
-    {
-      "src": "/pwa/icons/windows/windowsphone-mediumtile-210-210.png",
-      "sizes": "210x210"
-    },
-    {
-      "src": "/pwa/icons/windows/windowsphone-mediumtile-150-150.png",
-      "sizes": "150x150"
-    },
-    {
-      "src": "/pwa/icons/windows/windowsphone-smalltile-170-170.png",
-      "sizes": "170x170"
-    },
-    {
-      "src": "/pwa/icons/windows/windowsphone-smalltile-99-99.png",
-      "sizes": "99x99"
-    },
-    {
-      "src": "/pwa/icons/windows/windowsphone-smalltile-71-71.png",
-      "sizes": "71x71"
-    },
-    {
-      "src": "/pwa/icons/windows/windowsphone-storelogo-120-120.png",
-      "sizes": "120x120"
-    },
-    {
-      "src": "/pwa/icons/windows/windowsphone-storelogo-70-70.png",
-      "sizes": "70x70"
-    },
-    {
-      "src": "/pwa/icons/windows/windowsphone-storelogo-50-50.png",
-      "sizes": "50x50"
-    },
-    {
-      "src": "/pwa/icons/msteams/msteams-192-192.png",
-      "sizes": "192x192"
-    },
-    {
-      "src": "/pwa/icons/msteams/msteams-silhouette-32-32.png",
-      "sizes": "32x32"
     },
     {
       "src": "/pwa/icons/android/android-launchericon-512-512.png",

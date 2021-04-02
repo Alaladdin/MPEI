@@ -67,20 +67,12 @@
   margin-bottom: 70px;
 }
 .home__sidebar {
-  display: flex;
-  flex-direction: column-reverse;
   margin-right: auto;
   margin-left: auto;
   width: 100%;
 }
 .home__actuality {
   margin-bottom: 20px;
-}
-
-.sidebar__link {
-  display: block;
-  margin-bottom: 10px;
-  text-align: center;
 }
 
 .layout {
@@ -153,12 +145,7 @@
     margin-bottom: 0;
   }
   .home__sidebar {
-    flex-direction: column;
     max-width: 400px;
-  }
-
-  .sidebar__link {
-    margin-bottom: 0;
   }
 }
 

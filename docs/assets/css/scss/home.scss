@@ -35,8 +35,6 @@
   }
 
   &__sidebar {
-    display: flex;
-    flex-direction: column-reverse;
     margin-right: auto;
     margin-left: auto;
     width: 100%;
@@ -44,14 +42,6 @@
 
   &__actuality {
     margin-bottom: 20px;
-  }
-}
-
-.sidebar {
-  &__link {
-    display: block;
-    margin-bottom: 10px;
-    text-align: center;
   }
 }
 
@@ -145,12 +135,7 @@
     }
 
     &__sidebar {
-      flex-direction: column;
       max-width: 400px;
     }
-  }
-
-  .sidebar__link {
-    margin-bottom: 0;
   }
 }

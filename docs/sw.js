@@ -1,18 +1,20 @@
-// @todo permanent cache / cache with time limit / exclude from cache
-const CACHE_VERSION = 'offline-v1';
+const CACHE_VERSION = 'offline-v2';
 const allowedCacheHosts = [
   self.location.origin,
   'https://mpei-server.herokuapp.com',
   'https://fonts.gstatic.com',
   'https://api.netlify.com',
+  'https://cdnjs.cloudflare.com',
 ];
 const filesToCache = [
   '/',
   '/assets/css/main.css',
   '/assets/css/home.css',
+  '/assets/css/watch.css',
 
   '/assets/js/main.js',
   '/assets/js/homepage.js',
+  '/assets/js/watch.js',
 
   '/assets/img/physics.webp',
   '/assets/img/math.webp',
@@ -23,6 +25,8 @@ const filesToCache = [
   '/assets/img/history.webp',
 
   'https://mpei-server.herokuapp.com/api/getActuality',
+  'https://cdnjs.cloudflare.com/ajax/libs/toastify-js/1.10.0/toastify.min.css',
+  'https://cdnjs.cloudflare.com/ajax/libs/toastify-js/1.10.0/toastify.min.js',
 ];
 
 // update cache

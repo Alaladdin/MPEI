@@ -6,6 +6,22 @@
   color: var(--md-accent-fg-color);
 }
 
+.small {
+  font-size: 0.7rem;
+}
+
+.ul-reset {
+  margin: 0 !important;
+  padding: 0 !important;
+}
+
+.pwa-install {
+  display: none;
+}
+.pwa-install.show {
+  display: block;
+}
+
 .sr-only {
   position: absolute;
   overflow: hidden;
@@ -44,6 +60,27 @@
 .md-tabs {
   background-color: var(--md-primary-fg-color--transparent);
 }
+.md-footer-links__header {
+  margin-bottom: 10px;
+}
+.md-footer-links__item {
+  position: relative;
+  margin: 0 !important;
+  padding-left: 20px;
+  list-style: none;
+}
+.md-footer-links__item::before {
+  content: "";
+  position: absolute;
+  top: 8px;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  width: 10px;
+  height: 2px;
+  background-color: var(--md-code-hl-function-color);
+}
+
 .text-center {
   text-align: center;
 }

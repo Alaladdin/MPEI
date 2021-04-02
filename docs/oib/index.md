@@ -1,12 +1,12 @@
 # Оглавление
 
-### [Записи](watch)
+### [Записи](watch/)
 
 ### К экзамену
 
 ???+ info
-    #### [Инструкция](instructions)
-    #### [Вопросы с консультации](consultation)
+    #### [Инструкция](instructions/)
+    #### [Вопросы с консультации](consultation/)
     #### Файлы
     [:fontawesome-solid-file-download:](files/form.docx){:download='form.docx'} [Форма для ответов](files/form.docx){:target='_blank'}
     #### Вопросы

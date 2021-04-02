@@ -10,6 +10,23 @@
   color: var(--md-typeset-a-color);
 }
 
+.small {
+  font-size: .7rem;
+}
+
+.ul-reset {
+  margin: 0 !important;
+  padding: 0 !important;
+}
+
+.pwa-install {
+  display: none;
+
+  &.show {
+    display: block;
+  }
+}
+
 .sr-only {
   position: absolute;
   overflow: hidden;
@@ -61,6 +78,31 @@
     &:hover,
     &:focus {
       @extend %link-style-default--hovered;
+    }
+  }
+
+  &-footer-links {
+    &__header {
+      margin-bottom: 10px;
+    }
+
+    &__item {
+      position: relative;
+      margin: 0 !important;
+      padding-left: 20px;
+      list-style: none;
+
+      &::before {
+        content: '';
+        position: absolute;
+        top: 8px;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        width: 10px;
+        height: 2px;
+        background-color: var(--md-code-hl-function-color);
+      }
     }
   }
 }
