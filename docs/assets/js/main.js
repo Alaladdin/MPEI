@@ -17,11 +17,26 @@ if ('serviceWorker' in navigator) {
           //                replaced by a newer version
 
           newWorker.addEventListener('statechange', (e) => {
-            // console.log('e', e);
-            console.log('newWorker.state has changed');
+            console.log('[SW]', e);
           });
         });
       })
       .catch(console.error);
   });
 }
+
+document.addEventListener('DOMContentLoaded', () => {
+  const networkStatus = document.querySelector('.network-status');
+  const networkStatusText = document.querySelector('.network-status__text');
+
+  const updateOnlineStatus = () => {
+    const condition = navigator.onLine ? 'online' : 'offline';
+
+    networkStatus.classList.toggle('online', navigator.onLine);
+    networkStatusText.textContent = condition;
+  };
+
+  window.addEventListener('online', updateOnlineStatus);
+  window.addEventListener('offline', updateOnlineStatus);
+  updateOnlineStatus();
+});

@@ -1,5 +1,5 @@
 // @todo permanent cache / cache with time limit / exclude from cache
-const CACHE_VERSION = 'cache-v1';
+const CACHE_VERSION = 'offline-v1';
 const allowedCacheHosts = [
   self.location.origin,
   'https://mpei-server.herokuapp.com',

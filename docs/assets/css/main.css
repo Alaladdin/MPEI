@@ -33,6 +33,10 @@
   --md-text-color: #f8f8f2de;
 }
 
+.md-announce__inner {
+  display: flex;
+  justify-content: space-between;
+}
 .md-header {
   border-bottom: 0.05rem solid var(--md-primary-fg-color);
   background-color: var(--md-header-bg-color);
@@ -42,6 +46,20 @@
 }
 .text-center {
   text-align: center;
+}
+
+.network-status {
+  display: inline-block;
+  color: var(--md-footer-fg-color--lighter);
+}
+.network-status__icon-online {
+  display: none !important;
+}
+.network-status.online .network-status__icon-offline {
+  display: none;
+}
+.network-status.online .network-status__icon-online {
+  display: inline-block !important;
 }
 
 /*# sourceMappingURL=main.css.map */

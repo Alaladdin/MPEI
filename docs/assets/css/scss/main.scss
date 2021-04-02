@@ -38,6 +38,11 @@
 }
 
 .md {
+  &-announce__inner {
+    display: flex;
+    justify-content: space-between;
+  }
+
   &-header {
     border-bottom: .05rem solid var(--md-primary-fg-color);
     background-color: var(--md-header-bg-color);
@@ -63,5 +68,25 @@
 .text {
   &-center {
     text-align: center;
+  }
+}
+
+// network status component
+.network-status {
+  display: inline-block;
+  color: var(--md-footer-fg-color--lighter);
+
+  &__icon-online {
+    display: none !important;
+  }
+
+  &.online {
+    .network-status__icon-offline {
+      display: none;
+    }
+
+    .network-status__icon-online {
+      display: inline-block !important;
+    }
   }
 }
