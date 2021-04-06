@@ -14,7 +14,7 @@
       {% for link in page.meta.links %}
 
       <div class='cell'>
-        {% if page.meta.links[link].not_ready %}
+        {% if page.meta.links[link].inactive %}
 
         <a class='cell__link cell__link--inactive'>
           {% if page.meta.links[link].icon %}

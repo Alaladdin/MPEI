@@ -24,7 +24,6 @@ theme:
     text: Roboto
     code: Roboto Mono
   icon:
-    logo: material/library
     repo: fontawesome/brands/github-alt
 
 tag_manager: GTM-KFJSDNH
