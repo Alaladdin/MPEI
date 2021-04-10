@@ -1,7 +1,5 @@
 document.addEventListener('DOMContentLoaded', () => {
   const pwaInstall = document.querySelector('.pwa-install');
-  const networkStatus = document.querySelector('.network-status');
-  const networkStatusText = document.querySelector('.network-status__text');
   let deferredPrompt;
 
   const showNotification = (text, options) => {
@@ -17,17 +15,8 @@ document.addEventListener('DOMContentLoaded', () => {
       },
       stopOnFocus: true,
     };
-    console.log(Object.assign(defaultOptions, options));
-    Toastify(Object.assign(defaultOptions, options))
-      .showToast();
-  };
 
-  // update online status
-  const updateOnlineStatus = () => {
-    const condition = navigator.onLine ? 'online' : 'offline';
-
-    networkStatus.classList.toggle('online', navigator.onLine);
-    networkStatusText.textContent = condition;
+    Toastify(Object.assign(defaultOptions, options)).showToast();
   };
 
   pwaInstall.onclick = (e) => e.preventDefault();
@@ -55,7 +44,8 @@ document.addEventListener('DOMContentLoaded', () => {
             if (yaCounter71337676) yaCounter71337676.reachGoal('pwaInstalled');
           }
           deferredPrompt = null;
-        });
+        })
+        .catch(console.error);
     });
   });
 
@@ -77,9 +67,4 @@ document.addEventListener('DOMContentLoaded', () => {
       })
       .catch(console.error);
   }
-
-  // init
-  window.addEventListener('online', updateOnlineStatus);
-  window.addEventListener('offline', updateOnlineStatus);
-  updateOnlineStatus();
 });
