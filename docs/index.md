@@ -15,10 +15,6 @@ links:
         title: Теория вер.
         icon: assets/img/probability.webp
         url: /probability/
-    english:
-        title: Английский
-        icon: assets/img/english.webp
-        url: /english/
     inf:
         title: Инф-ка
         icon: assets/img/informatics.webp

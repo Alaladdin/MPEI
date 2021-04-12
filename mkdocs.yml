@@ -24,7 +24,6 @@ theme:
     text: Roboto
     code: Roboto Mono
   icon:
-    logo: material/library
     repo: fontawesome/brands/github-alt
 
 tag_manager: GTM-KFJSDNH
@@ -67,7 +66,13 @@ plugins:
         remove_comments: true
 
 extra_css:
-  - 'assets/css/main.css'
+  - assets/css/main.css
+  - https://cdnjs.cloudflare.com/ajax/libs/toastify-js/1.10.0/toastify.min.css
 
 extra_javascript:
-  - https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-MML-AM_CHTML
+  - /assets/js/main.js
+  - https://cdnjs.cloudflare.com/ajax/libs/toastify-js/1.10.0/toastify.js
+  # - https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-MML-AM_CHTML
+
+extra:
+  manifest: /manifest.json

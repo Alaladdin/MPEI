@@ -19,7 +19,7 @@
 }
 .actuality__body {
   overflow-y: auto;
-  max-height: 400px;
+  max-height: clamp(200px, 60vh, 350px);
 }
 .actuality__body::-webkit-scrollbar {
   width: 4px;
@@ -50,28 +50,30 @@
   max-width: 100%;
 }
 
+@media screen and (max-width: 76.1875em) {
+  .md-header-nav__button.md-logo,
+.md-header__button.md-logo {
+    display: block;
+  }
+  .md-header-nav__button.md-icon,
+.md-header__button.md-icon {
+    display: none;
+  }
+}
 .home__container {
   display: flex;
   flex-direction: column;
 }
 .home__layout {
-  margin-bottom: 40px;
+  margin-bottom: 70px;
 }
 .home__sidebar {
-  display: flex;
-  flex-direction: column-reverse;
   margin-right: auto;
   margin-left: auto;
   width: 100%;
 }
 .home__actuality {
   margin-bottom: 20px;
-}
-
-.sidebar__link {
-  display: block;
-  margin-bottom: 10px;
-  text-align: center;
 }
 
 .layout {
@@ -144,12 +146,7 @@
     margin-bottom: 0;
   }
   .home__sidebar {
-    flex-direction: column;
     max-width: 400px;
-  }
-
-  .sidebar__link {
-    margin-bottom: 0;
   }
 }
 
