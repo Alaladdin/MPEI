@@ -89,7 +89,7 @@
 
     if (playListID.length <= 0) throw Error('playlistId not provided');
 
-    return fetch(`https://mpei-server.herokuapp.com/api/getPlaylist/${playListID}`)
+    return fetch(`https://api.mpei.space/getPlaylist/${playListID}`)
       .then((res) => res.json());
   };
 

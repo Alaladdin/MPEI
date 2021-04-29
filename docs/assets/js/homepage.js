@@ -21,7 +21,7 @@ document.addEventListener('DOMContentLoaded', async () => {
   };
 
   // get actuality
-  const getActuality = async () => fetch('https://mpei-server.herokuapp.com/api/getActuality')
+  const getActuality = async () => fetch('https://api.mpei.space/getActuality')
     .then((res) => {
       const json = res.json();
       if (!res.ok) throw new Error(json.error);

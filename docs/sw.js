@@ -1,7 +1,7 @@
 const CACHE_VERSION = 'offline-v1';
 const allowedCacheHosts = [
   self.location.origin,
-  'https://mpei-server.herokuapp.com',
+  'https://api.mpei.space',
   'https://fonts.gstatic.com',
   'https://api.netlify.com',
   'https://cdnjs.cloudflare.com',
@@ -24,7 +24,7 @@ const filesToCache = [
   '/assets/img/oib.webp',
   '/assets/img/history.webp',
 
-  'https://mpei-server.herokuapp.com/api/getActuality',
+  'https://api.mpei.space/getActuality',
   'https://cdnjs.cloudflare.com/ajax/libs/toastify-js/1.10.0/toastify.min.css',
   'https://cdnjs.cloudflare.com/ajax/libs/toastify-js/1.10.0/toastify.min.js',
 ];
