@@ -49,7 +49,6 @@ document.addEventListener('DOMContentLoaded', () => {
         .catch(console.error);
     });
   });
-  window.showNotification = showNotification;
 
   // serviceWorker
   if ('serviceWorker' in navigator) {
@@ -67,4 +66,6 @@ document.addEventListener('DOMContentLoaded', () => {
       })
       .catch(console.error);
   }
+
+  window.showNotification = showNotification;
 });

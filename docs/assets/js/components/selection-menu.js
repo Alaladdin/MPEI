@@ -2,13 +2,15 @@ window.addEventListener('load', () => {
   const selectionMenu = document.importNode(document.querySelector('template').content, true).childNodes[1];
   const getSelectionText = () => window.getSelection().toString();
   const removeSelectionMenu = () => {
-    const control = document.querySelector('.selection-menu');
+    const controls = document.querySelectorAll('.selection-menu');
 
-    if (control !== null) {
-      control.remove();
-      document
-        .getSelection()
-        .removeAllRanges();
+    if (controls !== null) {
+      controls.forEach((control) => {
+        control.remove();
+        document
+          .getSelection()
+          .removeAllRanges();
+      });
     }
   };
   const initButtonsEvents = () => {
