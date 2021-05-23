@@ -16,7 +16,8 @@ document.addEventListener('DOMContentLoaded', () => {
       stopOnFocus: true,
     };
 
-    Toastify(Object.assign(defaultOptions, options)).showToast();
+    // eslint-disable-next-line no-undef
+    Toastify({ ...defaultOptions, ...options }).showToast();
   };
 
   pwaInstall.onclick = (e) => e.preventDefault();
@@ -39,15 +40,16 @@ document.addEventListener('DOMContentLoaded', () => {
       // Wait for the user to respond to the prompt
       deferredPrompt.userChoice
         .then((choiceResult) => {
+          deferredPrompt = null;
           if (choiceResult.outcome === 'accepted') {
             pwaInstall.classList.remove('show');
             if (yaCounter71337676) yaCounter71337676.reachGoal('pwaInstalled');
           }
-          deferredPrompt = null;
         })
         .catch(console.error);
     });
   });
+  window.showNotification = showNotification;
 
   // serviceWorker
   if ('serviceWorker' in navigator) {
@@ -58,9 +60,7 @@ document.addEventListener('DOMContentLoaded', () => {
         reg.addEventListener('updatefound', () => {
           if (navigator.serviceWorker.controller) {
             showNotification('cache update is available', {
-              onClick() {
-                window.location.reload();
-              },
+              onClick: () => window.location.reload(),
             });
           }
         });
