@@ -1,4 +1,6 @@
 title: Теория вер.
 nav:
     - Оглавление: index.md
+    - Инструкция к экзамену: instructions.md
+    - Вопросы с консультации: consultation.md
     - Записи: watch.md

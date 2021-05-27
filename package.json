@@ -1,6 +1,6 @@
 {
   "name": "mpei.space",
-  "version": "1.2.0",
+  "version": "1.2.1",
   "description": "MPEI students open library",
   "scripts": {
     "build": "mkdocs build",
