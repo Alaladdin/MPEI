@@ -6,6 +6,7 @@
 
 
 ???+ info
+    #### [Распределение номеров](distribution/)
     #### [Инструкция](instructions/)
     #### [Вопросы с консультации](consultation/)
     [:fontawesome-solid-file-download:](files/scan__petrushko__exam.pdf){:download='scan__petrushko__exam.pdf'} [Возможные задания к экзамену](files/scan__petrushko__exam.pdf){:target='_blank'}
