@@ -3,6 +3,7 @@ const allowedCacheHosts = [
   self.location.origin,
   'https://api.mpei.space',
   'https://fonts.gstatic.com',
+  'https://gsx2json.com',
   'https://api.netlify.com',
   'https://cdnjs.cloudflare.com',
 ];
