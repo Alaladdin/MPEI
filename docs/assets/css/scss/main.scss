@@ -1,4 +1,4 @@
-@import 'components/selection-menu';
+//@import 'components/selection-menu';
 
 %link-style-default {
   color: var(--md-primary-fg-color);
@@ -107,32 +107,6 @@
         height: 2px;
         background-color: var(--md-code-hl-function-color);
       }
-    }
-  }
-}
-
-.text {
-  &-center {
-    text-align: center;
-  }
-}
-
-// network status component
-.network-status {
-  display: inline-block;
-  color: var(--md-footer-fg-color--lighter);
-
-  &__icon-online {
-    display: none !important;
-  }
-
-  &.online {
-    .network-status__icon-offline {
-      display: none;
-    }
-
-    .network-status__icon-online {
-      display: inline-block !important;
     }
   }
 }

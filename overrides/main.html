@@ -23,29 +23,30 @@
   {% if config.tag_manager %}
     {% include "partials/integrations/tag-manager.html" %}
   {% endif %}
+<!--
+ <template>
+     <div class='selection-menu'>
+         <div class='selection-menu__btn-group'>
+               <button class='selection-menu__btn selection-menu__separator' data-action='copy' title='Copy'>
+                   {% include ".icons/fontawesome/regular/copy.svg" %}
+               </button>
+         </div>
 
-  <template>
-      <div class='selection-menu'>
-          <div class='selection-menu__btn-group'>
-                <button class='selection-menu__btn selection-menu__separator' data-action='copy' title='Copy'>
-                    {% include ".icons/fontawesome/regular/copy.svg" %}
-                </button>
-          </div>
+         <div class='selection-menu__btn-group'>
+             <button class='selection-menu__btn' data-action='vkontakte' title='Share with VK'>
+                 {% include ".icons/fontawesome/brands/vk.svg" %}
+             </button>
 
-          <div class='selection-menu__btn-group'>
-              <button class='selection-menu__btn' data-action='vkontakte' title='Share with VK'>
-                  {% include ".icons/fontawesome/brands/vk.svg" %}
-              </button>
+             <button class='selection-menu__btn' data-action='telegram' title='Share with Telegram'>
+                 {% include ".icons/fontawesome/brands/telegram-plane.svg" %}
+             </button>
 
-              <button class='selection-menu__btn' data-action='telegram' title='Share with Telegram'>
-                  {% include ".icons/fontawesome/brands/telegram-plane.svg" %}
-              </button>
-
-              <button class='selection-menu__btn' data-action='twitter' title='Share with Twitter'>
-                  {% include ".icons/fontawesome/brands/twitter.svg" %}
-              </button>
-          </div>
+             <button class='selection-menu__btn' data-action='twitter' title='Share with Twitter'>
+                 {% include ".icons/fontawesome/brands/twitter.svg" %}
+             </button>
+         </div>
       </div>
   </template>
-  <script defer src='/assets/js/components/selection-menu.js'></script>
+
+ <script defer src='/assets/js/components/selection-menu.js'></script> -->
 {% endblock %}
