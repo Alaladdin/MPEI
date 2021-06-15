@@ -64,6 +64,9 @@ plugins:
       minify_js: true
       htmlmin_opts:
         remove_comments: true
+      js_files:
+        - assets/css/main.css
+        - /assets/js/main.js
 
 extra_css:
   - assets/css/main.css
