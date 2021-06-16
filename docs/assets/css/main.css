@@ -49,6 +49,16 @@
   --md-text-color: #f8f8f2de;
 }
 
+article img {
+  display: block;
+  margin: 10px auto;
+}
+
+article img,
+.medium-zoom-image {
+  border-radius: 4px;
+}
+
 .md-announce__inner {
   display: flex;
   justify-content: space-between;

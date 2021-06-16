@@ -33,7 +33,6 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // pwa btn click event
     pwaInstall.addEventListener('click', () => {
-
       // Show the prompt
       deferredPrompt.prompt();
 
@@ -66,6 +65,12 @@ document.addEventListener('DOMContentLoaded', () => {
       })
       .catch(console.error);
   }
+
+  // image zoom
+  mediumZoom('article img', {
+    background: '#2E303D',
+    scrollOffset: 20,
+  });
 
   window.showNotification = showNotification;
 });

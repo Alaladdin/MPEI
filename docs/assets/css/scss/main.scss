@@ -1,4 +1,5 @@
 //@import 'components/selection-menu';
+$border-radius: 4px;
 
 %link-style-default {
   color: var(--md-primary-fg-color);
@@ -54,6 +55,16 @@
   --md-typeset-a-color: #8be8fd;
   --md-accent-fg-color: #b07df7;
   --md-text-color: #f8f8f2de;
+}
+
+article img {
+  display: block;
+  margin: 10px auto;
+}
+
+article img,
+.medium-zoom-image {
+  border-radius: $border-radius;
 }
 
 .md {
