@@ -30,9 +30,10 @@ tag_manager: GTM-KFJSDNH
 
 markdown_extensions:
   - toc:
-      permalink: '#'
+      permalink: '⚓︎'
   - admonition
   - abbr
+  - attr_list
   - pymdownx.extra
   - pymdownx.superfences
   - pymdownx.tabbed
@@ -48,13 +49,14 @@ markdown_extensions:
       emoji_generator: !!python/name:materialx.emoji.to_svg
 
 plugins:
+  - awesome-pages
+  - macros
   - search:
       lang:
         - ru
         - en
-  - awesome-pages
-  - macros
   - git-revision-date-localized:
+      enable_creation_date: true
       type: timeago
       time_zone: Europe/Moscow
       locale: ru

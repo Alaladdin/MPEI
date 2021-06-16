@@ -16,6 +16,8 @@ const filesToCache = [
   '/assets/js/main.js',
   '/assets/js/homepage.js',
   '/assets/js/watch.js',
+  '/assets/js/distribution.js',
+  '/assets/js/components/dropDown.js',
 
   '/assets/img/physics.webp',
   '/assets/img/math.webp',
@@ -28,6 +30,7 @@ const filesToCache = [
   'https://api.mpei.space/getActuality',
   'https://cdnjs.cloudflare.com/ajax/libs/toastify-js/1.10.0/toastify.min.css',
   'https://cdnjs.cloudflare.com/ajax/libs/toastify-js/1.10.0/toastify.min.js',
+  'https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-MML-AM_CHTML',
 ];
 
 // update cache

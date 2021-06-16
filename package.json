@@ -5,7 +5,7 @@
   "scripts": {
     "build": "mkdocs build",
     "dev": "mkdocs serve -a 0.0.0.0:8000",
-    "dev:dirty": "mkdocs serve -a 0.0.0.0:8000 --dirtyreload"
+    "dev:dirty": "mkdocs serve -a 0.0.0.0:8000 --dirtyreload --livereload"
   },
   "repository": {
     "type": "git",
@@ -17,13 +17,9 @@
   },
   "homepage": "https://mpei.space",
   "devDependencies": {
-    "eslint": "^7.27.0",
+    "eslint": "^7.28.0",
     "eslint-config-airbnb-base": "^14.2.1",
-    "eslint-config-google": "^0.14.0",
     "eslint-plugin-import": "^2.23.4",
-    "eslint-plugin-no-loops": "^0.3.0",
-    "eslint-plugin-promise": "^5.1.0",
-    "eslint-plugin-sonarjs": "^0.7.1-117",
     "stylelint": "^13.13.1",
     "stylelint-config-standard": "^22.0.0",
     "stylelint-order": "^4.1.0",
