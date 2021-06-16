@@ -67,7 +67,7 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 
   // image zoom
-  mediumZoom('article img', {
+  mediumZoom(document.querySelectorAll('article img:not(.cell__img)'), {
     background: '#2E303D',
     scrollOffset: 20,
   });
