@@ -1,6 +1,4 @@
 document.addEventListener('DOMContentLoaded', async () => {
-  const actualityEl = document.querySelector('.actuality');
-
   const normalizeLineBreaks = (text) => text.replace(/(?:\r\n|\r|\n)/g, '<br>');
   const formatDate = (dateString) => {
     const options = {
@@ -13,11 +11,17 @@ document.addEventListener('DOMContentLoaded', async () => {
   };
 
   const writeActuality = (actualityBody, actualityFooter) => {
+    const actualityEl = document.querySelector('.actuality');
     const actualityBodyEl = actualityEl.querySelector('.actuality__content');
     const actualityFooterEl = actualityEl.querySelector('.actuality__footer');
 
     actualityBodyEl.innerHTML = normalizeLineBreaks(actualityBody);
-    if (actualityFooter) actualityFooterEl.textContent = `Последнее обновление: ${formatDate(actualityFooter)}`;
+
+    if (actualityFooter) {
+      actualityEl.classList.remove('text-center');
+      actualityFooterEl.classList.remove('sr-only');
+      actualityFooterEl.textContent = `Обновлено: ${formatDate(actualityFooter)}`;
+    }
   };
 
   // get actuality
@@ -40,10 +44,9 @@ document.addEventListener('DOMContentLoaded', async () => {
   if (actuality) {
     // if response is not empty
     if (actuality.content) {
-      actualityEl.classList.remove('text-center');
       writeActuality(actuality.content, actuality.date);
     } else {
-      writeActuality('Актуалочка пустая😢');
+      writeActuality('Актуалочка пустая 😢');
     }
   }
 });

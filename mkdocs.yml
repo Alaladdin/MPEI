@@ -4,7 +4,7 @@ site_author: Aladdin
 site_url: https://mpei.space/
 
 repo_url: https://github.com/Alaladdin/MPEI/
-edit_uri: edit/main/docs/
+edit_uri: blob/main/docs/
 copyright: By <a href="https://github.com/Alaladdin/" target="_blank" rel="nofollow noopener">Alaladdin</a>
 
 theme:
@@ -15,11 +15,9 @@ theme:
     scheme: slate
     primary: deep purple
     accent: deep purple
-
   features:
     - navigation.tabs
     - navigation.sections
-
   font:
     text: Roboto
     code: Roboto Mono
@@ -60,14 +58,12 @@ plugins:
       type: timeago
       time_zone: Europe/Moscow
       locale: ru
-
   - minify:
       minify_html: true
       minify_js: true
       htmlmin_opts:
         remove_comments: true
       js_files:
-        - assets/css/main.css
         - /assets/js/main.js
 
 extra_css:
