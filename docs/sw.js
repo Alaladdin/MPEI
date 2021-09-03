@@ -1,4 +1,4 @@
-const CACHE_VERSION = 'offline-v1';
+const CACHE_VERSION = 'offline-v2';
 const allowedCacheHosts = [
   self.location.origin,
   'https://api.mpei.space',
@@ -14,11 +14,13 @@ const filesToCache = [
   '/assets/css/watch.css',
 
   '/assets/js/main.js',
-  '/assets/js/homepage.js',
   '/assets/js/watch.js',
   '/assets/js/distribution.js',
   '/assets/js/components/dropDown.js',
 
+  'assets/img/bjd.webp',
+  'assets/img/os_administration.svg',
+  'assets/img/math_logic.webp',
   '/assets/img/physics.webp',
   '/assets/img/math.webp',
   '/assets/img/probability.webp',
@@ -27,7 +29,6 @@ const filesToCache = [
   '/assets/img/oib.webp',
   '/assets/img/history.webp',
 
-  'https://api.mpei.space/getActuality',
   'https://cdnjs.cloudflare.com/ajax/libs/toastify-js/1.10.0/toastify.min.css',
   'https://cdnjs.cloudflare.com/ajax/libs/toastify-js/1.10.0/toastify.min.js',
   'https://cdnjs.cloudflare.com/ajax/libs/medium-zoom/1.0.6/medium-zoom.min.js',
@@ -53,10 +54,7 @@ self.addEventListener('install', (e) => {
   console.log('[SW] Installing...');
   self.skipWaiting();
 
-  e.waitUntil(
-    caches.open(CACHE_VERSION)
-      .then((cache) => cache.addAll(filesToCache)),
-  );
+  e.waitUntil(caches.open(CACHE_VERSION).then((cache) => cache.addAll(filesToCache)));
 });
 
 // Activate
@@ -87,10 +85,7 @@ self.addEventListener('fetch', (e) => {
   }
 
   // response immediately
-  e.respondWith(
-    fromCache(request)
-      .catch(() => fetch(request)),
-  );
+  e.respondWith(fromCache(request).catch(() => fetch(request)));
 
   // update cache
   e.waitUntil(updateCache(request));

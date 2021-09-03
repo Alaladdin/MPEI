@@ -8,7 +8,7 @@
 {% block content %}
   {{ page.content }}
   <div class='home__container'>
-    <div class='layout layout-3 home__layout'>
+    <div class='layout layout-6 home__layout'>
       {% if page.meta.links %}
 
       {% for link in page.meta.links %}
@@ -43,20 +43,9 @@
       </div>
 
       {% endfor %}
-
       {% endif %}
     </div>
-    <div class='sidebar home__sidebar'>
-      <div class='actuality home__actuality text-center'>
-        <div class='actuality__header'>Актуалочка</div>
-        <div class='actuality__body'>
-          <div class='actuality__content'>Грузится...</div>
-        </div>
-        <div class='actuality__footer sr-only'></div>
-      </div>
-    </div>
   </div>
-  <script src='/assets/js/homepage.js'></script>
 
   <!-- Revision date -->
   {% if page and page.meta %}

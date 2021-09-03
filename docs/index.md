@@ -3,6 +3,18 @@ template: home.html
 hide:
     - toc
 links:
+    bjd:
+        title: БЖД
+        icon: assets/img/bjd.webp
+        url: /bjd/
+    os_administration:
+        title: АД. ОС
+        icon: assets/img/os_administration.svg
+        url: /os_administration/
+    math_logic:
+        title: МЛиТА
+        icon: assets/img/math_logic.webp
+        url: /math-logic
     physics:
         title: Физика
         icon: assets/img/physics.webp
