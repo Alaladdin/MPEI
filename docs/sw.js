@@ -68,8 +68,8 @@ self.addEventListener('activate', async (e) => {
           return caches.delete(key);
         }),
       ))
-      .then(() => console.log(`[SW] Cache: ${CACHE_VERSION}`)),
-      .catch(console.error)
+      .then(() => console.log(`[SW] Cache: ${CACHE_VERSION}`))
+      .catch(console.error);
   );
 });
 
@@ -80,8 +80,7 @@ self.addEventListener('fetch', (e) => {
 
   // Не обрабатываем домены не из списка разрешенных и не GET запросы
   if (!allowedCacheHosts.includes(origin) || request.method !== 'GET') {
-    return fetch(request)
-      .catch(console.error)
+    return fetch(request).catch(console.error);
   }
 
   // response immediately
