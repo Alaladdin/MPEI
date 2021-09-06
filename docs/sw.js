@@ -69,7 +69,7 @@ self.addEventListener('activate', async (e) => {
         }),
       ))
       .then(() => console.log(`[SW] Cache: ${CACHE_VERSION}`))
-      .catch(console.error);
+      .catch(console.error)
   );
 });
 
