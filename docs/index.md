@@ -10,7 +10,7 @@ links:
     os_administration:
         title: АД. ОС
         icon: assets/img/os_administration.svg
-        url: /os_administration/
+        url: /os-administration/
     math_logic:
         title: МЛиТА
         icon: assets/img/math_logic.webp

@@ -1,4 +1,4 @@
-const CACHE_VERSION = 'offline-v2';
+const CACHE_VERSION = 'offline-v3';
 const allowedCacheHosts = [
   self.location.origin,
   'https://api.mpei.space',
@@ -28,8 +28,6 @@ const filesToCache = [
   '/assets/img/oib.webp',
   '/assets/img/history.webp',
 
-  'https://cdnjs.cloudflare.com/ajax/libs/toastify-js/1.10.0/toastify.min.css',
-  'https://cdnjs.cloudflare.com/ajax/libs/toastify-js/1.10.0/toastify.min.js',
   'https://cdnjs.cloudflare.com/ajax/libs/medium-zoom/1.0.6/medium-zoom.min.js',
   'https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-MML-AM_CHTML',
 ];
@@ -50,15 +48,17 @@ const fromCache = async (request) => {
 
 // Install
 self.addEventListener('install', (e) => {
-  console.log('[SW] Installing...');
+  console.info('[SW] Installing...');
   self.skipWaiting();
 
-  e.waitUntil(caches.open(CACHE_VERSION).then((cache) => cache.addAll(filesToCache)));
+  e.waitUntil(caches.open(CACHE_VERSION)
+    .then((cache) => cache.addAll(filesToCache))
+    .catch(console.error));
 });
 
 // Activate
 self.addEventListener('activate', async (e) => {
-  console.log('[SW] Activate');
+  console.info('[SW] Activate');
 
   e.waitUntil(
     caches.keys()
@@ -68,8 +68,8 @@ self.addEventListener('activate', async (e) => {
           return caches.delete(key);
         }),
       ))
-      .then(() => console.log(`[SW] Cache: ${CACHE_VERSION}`))
-      .catch(console.error)
+      .then(() => console.info(`[SW] Cache: ${CACHE_VERSION}`))
+      .catch(console.error),
   );
 });
 

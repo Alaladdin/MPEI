@@ -59,6 +59,13 @@ article img,
   border-radius: 4px;
 }
 
+.medium-zoom-overlay {
+  z-index: 10;
+}
+.medium-zoom-image {
+  z-index: 20;
+}
+
 .md-announce__inner {
   display: flex;
   justify-content: space-between;

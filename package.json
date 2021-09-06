@@ -1,6 +1,6 @@
 {
   "name": "mpei.space",
-  "version": "1.3.4",
+  "version": "1.3.5",
   "description": "MPEI students open library",
   "scripts": {
     "build": "mkdocs build",
@@ -24,8 +24,5 @@
     "stylelint-config-standard": "^22.0.0",
     "stylelint-order": "^4.1.0",
     "stylelint-scss": "^3.20.1"
-  },
-  "optionalDependencies": {
-    "medium-zoom": "^1.0.6"
   }
 }

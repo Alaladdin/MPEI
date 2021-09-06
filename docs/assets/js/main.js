@@ -2,24 +2,6 @@ document.addEventListener('DOMContentLoaded', () => {
   const pwaInstall = document.querySelector('.pwa-install');
   let deferredPrompt;
 
-  const showNotification = (text, options) => {
-    const defaultOptions = {
-      text,
-      duration: 0,
-      gravity: 'bottom',
-      position: 'left',
-      style: {
-        fontSize: '0.8rem',
-        background: '#3d3a51',
-        userSelect: 'none',
-      },
-      stopOnFocus: true,
-    };
-
-    // eslint-disable-next-line no-undef
-    Toastify({ ...defaultOptions, ...options }).showToast();
-  };
-
   pwaInstall.onclick = (e) => e.preventDefault();
 
   // pwa install prompt
@@ -56,11 +38,7 @@ document.addEventListener('DOMContentLoaded', () => {
         console.log('[SW] Registered');
 
         reg.addEventListener('updatefound', () => {
-          if (navigator.serviceWorker.controller) {
-            showNotification('cache update is available', {
-              onClick: () => window.location.reload(),
-            });
-          }
+          if (navigator.serviceWorker.controller) console.info('cache update is available');
         });
       })
       .catch(console.error);
@@ -71,6 +49,4 @@ document.addEventListener('DOMContentLoaded', () => {
     background: '#2E303D',
     scrollOffset: 20,
   });
-
-  window.showNotification = showNotification;
 });
