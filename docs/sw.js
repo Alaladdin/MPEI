@@ -13,7 +13,6 @@ const filesToCache = [
   '/assets/css/home.css',
   '/assets/css/watch.css',
 
-  '/assets/js/main.js',
   '/assets/js/watch.js',
   '/assets/js/distribution.js',
   '/assets/js/components/dropDown.js',
@@ -70,6 +69,7 @@ self.addEventListener('activate', async (e) => {
         }),
       ))
       .then(() => console.log(`[SW] Cache: ${CACHE_VERSION}`)),
+      .catch(console.error)
   );
 });
 
@@ -81,7 +81,7 @@ self.addEventListener('fetch', (e) => {
   // Не обрабатываем домены не из списка разрешенных и не GET запросы
   if (!allowedCacheHosts.includes(origin) || request.method !== 'GET') {
     return fetch(request)
-      .catch((err) => console.log(err));
+      .catch(console.error)
   }
 
   // response immediately
