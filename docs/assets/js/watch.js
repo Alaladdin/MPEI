@@ -1,6 +1,4 @@
 {
-  var player;
-
   class Loader {
     constructor(el) {
       this.el = el;
@@ -32,12 +30,9 @@
    * Creates YouTube video player
    * @return {void}
    */
+  let player;
   function onYouTubeIframeAPIReady() {
-    player = new YT.Player('player', {
-      height: '360',
-      width: '640',
-      videoId: 'dQw4w9WgXcQ',
-    });
+    player = new YT.Player('player', { height: '360', width: '640', videoId: 'dQw4w9WgXcQ' });
   }
 
   /**
@@ -93,13 +88,8 @@
       .then((res) => res.json());
   };
 
-  dropdownLoader.create();
   initPlayer();
   apiCall()
-    .then((data) => {
-      dropdownLoader.delete();
-      return data;
-    })
     .then(initWatch)
     .catch((err) => createErrorMess(err.message));
 }

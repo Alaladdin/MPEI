@@ -3,18 +3,22 @@ template: home.html
 hide:
     - toc
 links:
-    bjd:
-        title: БЖД
-        icon: assets/img/bjd.webp
-        url: /bjd/
-    os_administration:
-        title: АД. ОС
-        icon: assets/img/os_administration.svg
-        url: /os-administration/
     math_logic:
         title: МЛиТА
         icon: assets/img/math_logic.webp
-        url: /math-logic
+        url: /math-logic/watch
+    os_administration:
+        title: АОС
+        icon: assets/img/os_administration.svg
+        url: /os-administration/watch
+    bjd:
+        title: БЖД
+        icon: assets/img/bjd.webp
+        url: /bjd/watch
+    philosophy:
+        title: Философия
+        icon: assets/img/philosophy.png
+        url: /philosophy/watch
     physics:
         title: Физика
         icon: assets/img/physics.webp
@@ -30,7 +34,7 @@ links:
     inf:
         title: Инф-ка
         icon: assets/img/informatics.webp
-        url: /inf/
+        url: /inf/watch
     oib:
         title: ОИБ
         icon: assets/img/oib.webp
@@ -38,7 +42,7 @@ links:
     history:
         title: История
         icon: assets/img/history.webp
-        url: /history/
+        url: /history/watch
 ---
 
 # Главная

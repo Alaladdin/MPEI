@@ -132,9 +132,7 @@ function createDropdown(
     const selectResult = changeSelectOption(value);
     const dropdownResult = changeDropdownOption(value, option);
     // В случае ошибки выдаем ее в консоль
-    if (!selectResult || !dropdownResult) {
-      console.error('Error while trying to change select or dropdown value');
-    }
+    if (!selectResult || !dropdownResult) console.error('Error while trying to change select or dropdown value');
 
     // Скрываем пункты в любом случае
     hideDropdown();

@@ -1,8 +1,9 @@
 nav:
   - index.md
-  - bjd
-  - os-administration
   - math-logic
+  - os-administration
+  - bjd
+  - philosophy
   - physics
   - math
   - probability
