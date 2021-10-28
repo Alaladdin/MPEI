@@ -15,6 +15,10 @@ links:
         title: БЖД
         icon: assets/img/bjd.webp
         url: /bjd/watch
+    english:
+        title: ИН. ЯЗ.
+        icon: assets/img/english.webp
+        url: /english/semester-3/watch/
     philosophy:
         title: Философия
         icon: assets/img/philosophy.png
