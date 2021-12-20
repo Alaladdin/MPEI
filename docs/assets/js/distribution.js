@@ -24,7 +24,9 @@ document.addEventListener('DOMContentLoaded', async () => {
     thead.appendChild(theadTR);
 
     // columns render
-    Object.keys(columns).forEach((columnName) => {
+    Object.keys(columns).forEach((columnName, i) => {
+      if (i > 1) return;
+
       const th = document.createElement('th');
 
       th.textContent = columnName;
@@ -37,7 +39,9 @@ document.addEventListener('DOMContentLoaded', async () => {
 
       tbody.appendChild(tbodyTR);
 
-      Object.values(row).forEach((rowName) => {
+      Object.values(row).forEach((rowName, i) => {
+        if (i > 1) return;
+
         const td = document.createElement('td');
 
         td.textContent = rowName.toString();
