@@ -17,13 +17,17 @@
 [расширения PyMdown](https://facelessuser.github.io/pymdown-extensions/installation/) и
 тему [Material for MkDocs](https://squidfunk.github.io/mkdocs-material/):
 
-``` shell
+``` bash
 pip install -r ./requirements.txt
+```
+
+``` bash
+npm install
 ```
 
 Сборка проекта:
 
-``` shell
+``` bash
 npm run build
 ```
 
@@ -35,6 +39,6 @@ npm run dev
 
 или
 
-``` shell
+``` bash
 npm run dev:dirty
 ```

@@ -5,8 +5,8 @@ document.addEventListener('DOMContentLoaded', async () => {
   };
   const distributionEL = document.querySelector('.distribution-table');
   const table = distributionEL.querySelector('table');
-  const { sheetId } = table.dataset || {};
-  const sheetData = fetch(`https://gsx2json.com/api?id=${sheetId}`)
+  const { sheetId, sheetName } = table.dataset || {};
+  const sheetData = fetch(`https://gsx2json.com/api?id=${sheetId}&sheet=${sheetName}`)
     .then((res) => {
       if (!res.ok) throw new Error(res.statusText);
 
