@@ -1,5 +1,6 @@
 title: БЖД
 nav:
+    - Оглавление: index.md
     - Записи: watch.md
     - Распределение вопросов: distribution.md
     - Экзамен: exam
