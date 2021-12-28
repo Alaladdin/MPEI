@@ -6,7 +6,7 @@
 
 !!! info
     #### [Вопросы с консультации](consultation/)
-    #### [Распределение номеров](distribution/)
+    #### [Распределение вопросов](distribution/)
     [:fontawesome-solid-file-download:](files/exam_theory__course__1.docx){:download='exam_theory__course__1.docx'} [Задания к экзамену (теория)](files/exam_theory__course__1.docx){ target='_blank' }
 
 ### Материалы

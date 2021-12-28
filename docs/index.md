@@ -14,7 +14,7 @@ links:
     bjd:
         title: БЖД
         icon: assets/img/bjd.webp
-        url: /bjd/watch
+        url: /bjd/
     english:
         title: ИН. ЯЗ.
         icon: assets/img/english.webp
