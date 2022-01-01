@@ -66,10 +66,10 @@ self.addEventListener('activate', async (e) => {
 self.addEventListener('fetch', async (e) => {
   const { request } = e;
   const { origin: requestHost } = new URL(request.url);
-  const isFileRequesting = request.url.match(/\.\w{2,5}($|\?)/);
+  // const isFileRequesting = request.url.match(/\.\w{2,5}($|\?)/);
   const isAllowedHost = allowedCacheHosts.includes(requestHost);
 
-  if (!isFileRequesting || !isAllowedHost || request.method !== 'GET') {
+  if (!isAllowedHost || request.method !== 'GET') {
     return fetch(request)
       .catch(console.error);
   }
