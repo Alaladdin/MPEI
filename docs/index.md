@@ -10,7 +10,7 @@ links:
     os_administration:
         title: АОС
         icon: assets/img/os_administration.svg
-        url: /os-administration/watch
+        url: /os-administration/
     bjd:
         title: БЖД
         icon: assets/img/bjd.webp
