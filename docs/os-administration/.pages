@@ -1,3 +1,5 @@
 title: АОС
 nav:
+    - Оглавление: index.md
     - Записи: watch.md
+    - Экзамен: exam
