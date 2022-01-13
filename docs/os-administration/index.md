@@ -38,7 +38,7 @@
 ### АОС Microsoft Windows
 
 ??? info "17 вопросов"
-    1. Основные версии ОС Microsoft Windows
+    1. [Основные версии ОС Microsoft Windows](exam/windows/1/)
     2. Процесс ручной установки ОС Microsoft Windows
     3. Процесс автоматизированной установки ОС Microsoft Windows
     4. Действия с учетными записями пользователей в ОС Microsoft Windows
