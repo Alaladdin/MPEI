@@ -49,6 +49,10 @@
   --md-text-color: #f8f8f2de;
 }
 
+* {
+  scroll-behavior: smooth;
+}
+
 article img {
   display: block;
   margin: 10px auto;
