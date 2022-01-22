@@ -1,5 +1,7 @@
 # Оглавление
 
+![Vova](exam/media/vova.png)
+
 [Записи](watch/)
 
 [Распределение вопросов](distribution/)
