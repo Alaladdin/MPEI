@@ -1,6 +1,6 @@
 /* eslint-disable no-restricted-globals */
 
-const CACHE_VERSION = 'offline-v4';
+const CACHE_VERSION = 'offline-v5';
 const allowedCacheHosts = [
   self.location.origin,
   // 'https://api.mpei.space',
@@ -11,11 +11,6 @@ const allowedCacheHosts = [
 const contentToCache = [
   '/assets/css/main.css',
   '/assets/css/home.css',
-  '/assets/css/watch.css',
-
-  '/assets/js/watch.js',
-  '/assets/js/distribution.js',
-  '/assets/js/components/dropDown.js',
 ];
 
 // update cache
@@ -52,7 +47,7 @@ self.addEventListener('activate', async (e) => {
     caches.keys()
       .then((keys) => Promise.all(
         keys.map((key) => {
-          if (key === CACHE_VERSION) return;
+          if (key === CACHE_VERSION) return true;
 
           return caches.delete(key);
         }),

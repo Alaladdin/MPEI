@@ -1,7 +1,5 @@
 title: Теория вер.
 nav:
     - Оглавление: index.md
-    - Распределение вопросов: distribution.md
     - Вопросы с консультации: consultation.md
-    - Записи: watch.md
     - Экзамен: exam

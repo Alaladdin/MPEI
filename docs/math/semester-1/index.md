@@ -1,7 +1,5 @@
 # Оглавление
 
-### [Записи](watch/)
-
 ### Конспекты
 
 [:fontawesome-solid-file-download:](conspectus/01.pdf){:download='conspectus_01.pdf'} [Конспект #1](conspectus/01.pdf){ target='_blank' }

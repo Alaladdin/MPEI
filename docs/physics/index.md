@@ -6,8 +6,6 @@
     #### [Вопросы с консультации](consultation/)
     #### [Возможные задачи](exam/)
 
-### [Записи](watch/)
-
 ### Материалы
 
 [:fontawesome-solid-file-download:](files/physics.docx){:download='physics.docx'} [Конспекты](files/physics.docx){ target='_blank' }
