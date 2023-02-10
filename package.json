@@ -22,7 +22,7 @@
     "eslint-plugin-import": "^2.25.4",
     "stylelint": "^14.2.0",
     "stylelint-config-standard": "^29.0.0",
-    "stylelint-order": "^5.0.0",
+    "stylelint-order": "^6.0.2",
     "stylelint-scss": "^4.1.0"
   }
 }
